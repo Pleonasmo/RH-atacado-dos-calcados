@@ -9,7 +9,8 @@ typedef struct
         ano;
 } Data;
 
-typedef struct{
+typedef struct
+{
     std::string bairro,
         cidade,
         rua,
