@@ -1,7 +1,6 @@
 #ifndef PESSOA_HEADER
 #define PESSOA_HEADER
 #include "../Util.hpp"
-#include <iostream>
 class Pessoa
 {
     std::string nome, cpf, estadoCivil;

@@ -14,8 +14,8 @@ public:
 
     float getParticipacaoLucros();
     void setParticipacaoLucros(float participacaoLucros);
-    float calcularSalario(int diasFaltas);
-    float calcularRecisao(Data desligamento);
+    float calcularSalario(int diasFaltas) override;
+    float calcularRecisao(Data desligamento) override;
 };
 
 #endif
