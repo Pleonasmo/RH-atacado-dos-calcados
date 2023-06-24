@@ -9,13 +9,13 @@ class Pessoa
     int quantFilhos;
 
 public:
-    //Construtor vazio:
+    // Construtor vazio:
     Pessoa();
 
-    //Construtor parametrizado:
-    Pessoa(std::string nome, std::string cpf,int dia, int mes, int ano,  std::string estadoCivil,std::string cidade, std::string bairro, std::string rua, std::string cep, int numero, int quantFilhos);
-    
-    //Getters e Setters:
+    // Construtor parametrizado:
+    Pessoa(std::string nome, std::string cpf, int dia, int mes, int ano, std::string estadoCivil, std::string cidade, std::string bairro, std::string rua, std::string cep, int numero, int quantFilhos);
+
+    // Getters e Setters:
     std::string getNome();
     void setNome(std::string nome);
     std::string getCpf();
@@ -25,7 +25,7 @@ public:
     std::string getEstadoCivil();
     void setEstadoCivil(std::string estadoCivil);
     Endereco getEnderecoPessoal();
-    void setEnderecoPessoal(std::string cidade, std::string bairro, std::string rua, std::string cep, int numero);
+    void setEnderecoPessoal(std::string cidade, std::string cep, std::string bairro, std::string rua, int numero);
     int getQuantFilhos();
     void setQuantFilhos(int quantFilhos);
 };

@@ -15,11 +15,10 @@ class Empresa
     std::vector<Asg> asgs;
     std::vector<Vendedor> vendedores;
     std::vector<Gerente> gerentes;
-    Data hoje;
 
 public:
     Empresa();
-    Empresa(std::string nomeEmpresa, std::string cnpj, float faturamentoMensal, Data dataHoje);
+    Empresa(std::string nomeEmpresa, std::string cnpj, float faturamentoMensal);
     float getFaturamentoMensal();
     void setFaturamentoMensal(float faturamento);
     std::string getNomeEmpresa();
@@ -32,7 +31,7 @@ public:
     std::vector<Vendedor> getVendedores();
     std::vector<Gerente> getGerentes();
     void carregarFuncoes();
-    void carregarEmpresa(int dia, int mes, int ano);
+    void carregarEmpresa();
     void carregarAsg();
     void carregarVendedor();
     void carregarGerente();
