@@ -447,7 +447,43 @@ void Empresa::imprimeDono() {
     cout << "----------------------------------------" << endl;
 }
 
-void Empresa::buscaFuncionario(int matricula) {}
+void Empresa::buscaFuncionario(int matricula) {
+    vector<Asg> asgs = getAsgs();
+    vector<Vendedor> vendedores = getVendedores();
+    vector<Gerente> gerentes = getGerentes();
+
+    bool encontrou = false;
+
+    //Buscando funcionario nos vetores de Asgs, vendedores e gerentes:
+    if(encontrou == false){
+        for(int i = 0; i < asgs.size(); i){ //Comparando matricula dos asgs
+            if(stoi(simplificadorMatricula(asgs[i].getMatricula())) == matricula){
+                encontrou = true;
+                cout << "\nFuncionário encontrado!" << endl;
+                cout << "\nNOME: " << asgs[i].getNome() << endl;
+            }
+        }
+    } if(encontrou == false){
+        for(int i = 0; i < vendedores.size(); i){ //Comparando matricula dos vendedores
+            if(stoi(simplificadorMatricula(vendedores[i].getMatricula())) == matricula){
+                encontrou = true;
+                cout << "\nFuncionário encontrado!" << endl;
+                cout << "\nNOME: " << vendedores[i].getNome() << endl;
+            }
+        }
+    } if(encontrou == false){
+        for(int i = 0; i < gerentes.size(); i){ //Comparando matricula dos gerentes
+            if(stoi(simplificadorMatricula(gerentes[i].getMatricula())) == matricula){
+                encontrou = true;
+                cout << "\nFuncionário encontrado!" << endl;
+                cout << "\nNOME: " << gerentes[i].getNome() << endl;
+            }
+        }
+    } if(encontrou == false) {
+        cout << "\nFuncionário não encontrado no sistema!\n" << endl;
+    }
+}
+
 void Empresa::cacularSalarioFuncionario(int matricula) {}
 void Empresa::calcularTodoOsSalarios() {}
 void Empresa::calcularRecisao(int matricula, Data desligamento) {}
