@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//Construtores:
 Gerente::Gerente() {}
 Gerente::Gerente(std::string nome, std::string cpf, std::string estadoCivil, int diaN, int mesN, int anoN, std::string cidade, std::string bairro, std::string rua, std::string cep, int numero, int quantFilhos,
                  std::string salario, std::string matricula, int dia, int mes, int ano, float participacaoLucros)
@@ -13,8 +14,12 @@ Gerente::Gerente(std::string nome, std::string cpf, std::string estadoCivil, int
     setIngressoEmpresa(dia, mes, ano);
     this->participacaoLucros = participacaoLucros;
 }
+
+//Getters e Setters:
 float Gerente::getParticipacaoLucros() { return participacaoLucros; }
 void Gerente::setParticipacaoLucros(float participacaoLucros) { this->participacaoLucros = participacaoLucros; }
+
+//Metodos virtuais sobrescritos de Funcionario:
 float Gerente::calcularSalario(int diasFaltas)
 {
     float salario;
@@ -37,6 +42,7 @@ float Gerente::calcularSalario(int diasFaltas)
     salario += getQuantFilhos() * 100;                   // E adiciona o valor pela quantidade de filhos
     return salario;
 }
+
 float Gerente::calcularRecisao(Data desligamento)
 {
     float ganhoRDia = stof(getSalario()) / 365;                        // Pega o valor ganho por dia no ano

@@ -1,6 +1,9 @@
 #include "Asg.hpp"
 #include <math.h>
+
 using namespace std;
+
+//Construtores:
 Asg::Asg() {}
 Asg::Asg(std::string nome, std::string cpf, std::string estadoCivil, int diaN, int mesN, int anoN, std::string cidade, std::string bairro, std::string rua, std::string cep, int numero, int quantFilhos,
          float adicionalInsalubridade, std::string salario, std::string matricula, int dia, int mes, int ano)
@@ -11,8 +14,12 @@ Asg::Asg(std::string nome, std::string cpf, std::string estadoCivil, int diaN, i
     setIngressoEmpresa(dia, mes, ano);
     this->adicionalInsalubridade = adicionalInsalubridade;
 }
+
+//Getters e Setters:
 float Asg::getAdicionalInsalubridade() { return adicionalInsalubridade; }
 void Asg::setAdicionalInsalubridade(float adicionalInsalubridade) { this->adicionalInsalubridade = adicionalInsalubridade; }
+
+//Metodos virtuais sobrescritos de Funcionario:
 float Asg::calcularSalario(int diasFaltas)
 {
     float salario;
@@ -36,6 +43,7 @@ float Asg::calcularSalario(int diasFaltas)
     salario += getQuantFilhos() * 100;
     return salario;
 }
+
 float Asg::calcularRecisao(Data desligamento)
 {
     float ganhoRDia = stof(getSalario()) / 365;                        // Pega o valor ganho por dia no ano

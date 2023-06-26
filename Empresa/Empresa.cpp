@@ -20,7 +20,7 @@ void Empresa::setNomeEmpresa(std::string nomeEmpresa) { this->nomeEmpresa = nome
 std::string Empresa::getCnpj() { return cnpj; }
 void Empresa::setCnpj(std::string cnpj) { this->cnpj = cnpj; }
 Pessoa Empresa::getDono() { return dono; }
-std::vector<Asg> Empresa::getAsg() { return asgs; }
+std::vector<Asg> Empresa::getAsgs() { return asgs; }
 std::vector<Vendedor> Empresa::getVendedores() { return vendedores; }
 std::vector<Gerente> Empresa::getGerentes() { return gerentes; }
 
@@ -170,6 +170,7 @@ void Empresa::carregarFuncoes()
         }
     }
 }
+
 void Empresa::carregarEmpresa()
 {
     std::vector<std::string> dadosEmpresa(3);
@@ -208,6 +209,7 @@ void Empresa::carregarEmpresa()
 
     std::cout << "Carregou empresa com sucesso." << std::endl;
 }
+
 void Empresa::carregarAsg()
 {
     fstream arq;
@@ -249,6 +251,7 @@ void Empresa::carregarAsg()
         }
     }
 }
+
 void Empresa::carregarVendedor()
 {
     fstream arq;
@@ -287,6 +290,7 @@ void Empresa::carregarVendedor()
         }
     }
 }
+
 void Empresa::carregarGerente()
 {
     fstream arq;
@@ -366,10 +370,83 @@ void Empresa::carregarDono()
 
     std::cout << "Carregou Dono com sucesso." << std::endl;
 }
-void Empresa::imprimeAsgs() {}
-void Empresa::imprimeVendendores() {}
-void Empresa::imprimeGerentes() {}
-void Empresa::imprimeDono() {}
+
+void Empresa::imprimeAsgs() {
+    std::vector<Asg> listaAsgs = getAsgs();
+    cout << "\n----- LISTA DE ASGS DA EMPRESA -----" << endl;
+    for(int i = 0; i < listaAsgs.size(); i++) { //Lê cada posicao do vetor de Asgs e em seguida imprime todos os atributos:
+        cout << "ASG numero " << i << ":" << endl;
+        cout << "Nome: " << listaAsgs[i].getNome() << endl;
+        cout << "CPF: " << listaAsgs[i].getCpf() << endl;
+        cout << "Data de nascimento: " << listaAsgs[i].getDataNascimento().dia << "/" << listaAsgs[i].getDataNascimento().mes << "/" << listaAsgs[i].getDataNascimento().ano << endl;
+        cout << "Endereço: " << listaAsgs[i].getEnderecoPessoal().cidade << ", " << listaAsgs[i].getEnderecoPessoal().bairro << ", " << listaAsgs[i].getEnderecoPessoal().cep 
+        << ", Rua " << listaAsgs[i].getEnderecoPessoal().rua << ", " << listaAsgs[i].getEnderecoPessoal().numero << endl;
+        cout << "Estado civil: " << listaAsgs[i].getEstadoCivil() << endl;
+        cout << "Quantidade de filhos " << listaAsgs[i].getQuantFilhos() << endl;
+        cout << "Matricula: " << listaAsgs[i].getMatricula() << endl;
+        cout << "Salario: " << listaAsgs[i].getSalario() << endl;
+        cout << "Data de ingresso: " << listaAsgs[i].getIngressoEmpresa().dia << "/" << listaAsgs[i].getIngressoEmpresa().mes << "/" << listaAsgs[i].getIngressoEmpresa().ano << endl;
+        cout << "Adicional de insalubridade: " << listaAsgs[i].getAdicionalInsalubridade() << endl;
+        cout << "\n" << endl;
+    }
+    cout << "----------------------------------------" << endl;
+}
+
+void Empresa::imprimeVendendores() {
+    std::vector<Vendedor> listaVendedores = getVendedores();
+    cout << "\n----- LISTA DE VENDEDORES DA EMPRESA -----" << endl;
+    for(int i = 0; i < listaVendedores.size(); i++) { //Lê cada posicao do vetor de Vendedores e em seguida imprime todos os atributos:
+        cout << "Vendedor numero " << i << ":" << endl;
+        cout << "Nome: " << listaVendedores[i].getNome() << endl;
+        cout << "CPF: " << listaVendedores[i].getCpf() << endl;
+        cout << "Data de nascimento: " << listaVendedores[i].getDataNascimento().dia << "/" << listaVendedores[i].getDataNascimento().mes << "/" << listaVendedores[i].getDataNascimento().ano << endl;
+        cout << "Endereço: " << listaVendedores[i].getEnderecoPessoal().cidade << ", " << listaVendedores[i].getEnderecoPessoal().bairro << ", " << listaVendedores[i].getEnderecoPessoal().cep 
+        << ", Rua " << listaVendedores[i].getEnderecoPessoal().rua << ", " << listaVendedores[i].getEnderecoPessoal().numero << endl;
+        cout << "Estado civil: " << listaVendedores[i].getEstadoCivil() << endl;
+        cout << "Quantidade de filhos " << listaVendedores[i].getQuantFilhos() << endl;
+        cout << "Matricula: " << listaVendedores[i].getMatricula() << endl;
+        cout << "Salario: " << listaVendedores[i].getSalario() << endl;
+        cout << "Data de ingresso: " << listaVendedores[i].getIngressoEmpresa().dia << "/" << listaVendedores[i].getIngressoEmpresa().mes << "/" << listaVendedores[i].getIngressoEmpresa().ano << endl;
+        cout << "Tipo de vendedor: " << listaVendedores[i].getTipoVendedor() << endl;
+        cout << "\n" << endl;
+    }
+    cout << "----------------------------------------" << endl;
+}
+
+void Empresa::imprimeGerentes() {
+    std::vector<Gerente> listaGerentes = getGerentes();
+    cout << "\n----- LISTA DE GERENTES DA EMPRESA -----" << endl;
+    for(int i = 0; i < listaGerentes.size(); i++) { //Lê cada posicao do vetor de Gerentes e em seguida imprime todos os atributos:
+        cout << "Gerente numero " << i << ":" << endl;
+        cout << "Nome: " << listaGerentes[i].getNome() << endl;
+        cout << "CPF: " << listaGerentes[i].getCpf() << endl;
+        cout << "Data de nascimento: " << listaGerentes[i].getDataNascimento().dia << "/" << listaGerentes[i].getDataNascimento().mes << "/" << listaGerentes[i].getDataNascimento().ano << endl;
+        cout << "Endereço: " << listaGerentes[i].getEnderecoPessoal().cidade << ", " << listaGerentes[i].getEnderecoPessoal().bairro << ", " << listaGerentes[i].getEnderecoPessoal().cep 
+        << ", Rua " << listaGerentes[i].getEnderecoPessoal().rua << ", " << listaGerentes[i].getEnderecoPessoal().numero << endl;
+        cout << "Estado civil: " << listaGerentes[i].getEstadoCivil() << endl;
+        cout << "Quantidade de filhos " << listaGerentes[i].getQuantFilhos() << endl;
+        cout << "Matricula: " << listaGerentes[i].getMatricula() << endl;
+        cout << "Salario: " << listaGerentes[i].getSalario() << endl;
+        cout << "Data de ingresso: " << listaGerentes[i].getIngressoEmpresa().dia << "/" << listaGerentes[i].getIngressoEmpresa().mes << "/" << listaGerentes[i].getIngressoEmpresa().ano << endl;
+        cout << "Participação nos lucros: " << listaGerentes[i].getParticipacaoLucros() << endl;
+        cout << "\n" << endl;
+    }
+    cout << "----------------------------------------" << endl;
+}
+
+void Empresa::imprimeDono() {
+    cout << "\n----- DONO DA EMPRESA -----" << endl;
+    cout << "Nome: " << dono.getNome() << endl;
+    cout << "CPF: " << dono.getCpf() << endl;
+    cout << "Data de nascimento: " << dono.getDataNascimento().dia << "/" << dono.getDataNascimento().mes << "/" << dono.getDataNascimento().ano << endl;
+    cout << "Endereço: " << dono.getEnderecoPessoal().cidade << ", " << dono.getEnderecoPessoal().bairro << ", " << dono.getEnderecoPessoal().cep 
+    << ", Rua " << dono.getEnderecoPessoal().rua << ", " << dono.getEnderecoPessoal().numero << endl;
+    cout << "Estado civil: " << dono.getEstadoCivil() << endl;
+    cout << "Quantidade de filhos " << dono.getQuantFilhos() << endl;
+    cout << "\n" << endl;
+    cout << "----------------------------------------" << endl;
+}
+
 void Empresa::buscaFuncionario(int matricula) {}
 void Empresa::cacularSalarioFuncionario(int matricula) {}
 void Empresa::calcularTodoOsSalarios() {}

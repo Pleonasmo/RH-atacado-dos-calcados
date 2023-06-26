@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//Construtores:
 Vendedor::Vendedor() {}
 Vendedor::Vendedor(std::string nome, std::string cpf, std::string estadoCivil, int diaN, int mesN, int anoN, std::string cidade, std::string bairro, std::string rua, std::string cep, int numero, int quantFilhos,
                    std::string salario, std::string matricula, int dia, int mes, int ano, char tipoVendedor)
@@ -13,8 +14,12 @@ Vendedor::Vendedor(std::string nome, std::string cpf, std::string estadoCivil, i
     setIngressoEmpresa(dia, mes, ano);
     this->tipoVendedor = tipoVendedor;
 }
+
+//Getters e Setters:
 char Vendedor::getTipoVendedor() { return tipoVendedor; }
 void Vendedor::setTipoVendedor(char tipoVendedor) { this->tipoVendedor = tipoVendedor; }
+
+//Metodos virtuais sobrescritos de Funcionario:
 float Vendedor::calcularSalario(int diasFaltas)
 {
     float salario;
@@ -53,6 +58,7 @@ float Vendedor::calcularSalario(int diasFaltas)
 
     return salario;
 }
+
 float Vendedor::calcularRecisao(Data desligamento)
 {
     float ganhoRDia = stof(getSalario()) / 365;                        // Pega o valor ganho por dia no ano

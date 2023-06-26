@@ -27,7 +27,7 @@ public:
     std::string getCnpj();
     void setCnpj(std::string cnpj);
     Pessoa getDono();
-    std::vector<Asg> getAsg();
+    std::vector<Asg> getAsgs();
     std::vector<Vendedor> getVendedores();
     std::vector<Gerente> getGerentes();
     void carregarFuncoes();
