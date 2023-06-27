@@ -370,120 +370,248 @@ void Empresa::carregarDono()
 
     std::cout << "Carregou Dono com sucesso." << std::endl;
 }
-
-void Empresa::imprimeAsgs() {
+void Empresa::imprimeAsgs()
+{
     std::vector<Asg> listaAsgs = getAsgs();
     cout << "\n----- LISTA DE ASGS DA EMPRESA -----" << endl;
-    for(int i = 0; i < listaAsgs.size(); i++) { //Lê cada posicao do vetor de Asgs e em seguida imprime todos os atributos:
+    for (int i = 0; i < listaAsgs.size(); i++)
+    { // Lê cada posicao do vetor de Asgs e em seguida imprime todos os atributos:
         cout << "ASG numero " << i << ":" << endl;
         cout << "Nome: " << listaAsgs[i].getNome() << endl;
         cout << "CPF: " << listaAsgs[i].getCpf() << endl;
         cout << "Data de nascimento: " << listaAsgs[i].getDataNascimento().dia << "/" << listaAsgs[i].getDataNascimento().mes << "/" << listaAsgs[i].getDataNascimento().ano << endl;
-        cout << "Endereço: " << listaAsgs[i].getEnderecoPessoal().cidade << ", " << listaAsgs[i].getEnderecoPessoal().bairro << ", " << listaAsgs[i].getEnderecoPessoal().cep 
-        << ", Rua " << listaAsgs[i].getEnderecoPessoal().rua << ", " << listaAsgs[i].getEnderecoPessoal().numero << endl;
+        cout << "Endereço: " << listaAsgs[i].getEnderecoPessoal().cidade << ", " << listaAsgs[i].getEnderecoPessoal().bairro << ", " << listaAsgs[i].getEnderecoPessoal().cep
+             << ", Rua " << listaAsgs[i].getEnderecoPessoal().rua << ", " << listaAsgs[i].getEnderecoPessoal().numero << endl;
         cout << "Estado civil: " << listaAsgs[i].getEstadoCivil() << endl;
         cout << "Quantidade de filhos " << listaAsgs[i].getQuantFilhos() << endl;
         cout << "Matricula: " << listaAsgs[i].getMatricula() << endl;
         cout << "Salario: " << listaAsgs[i].getSalario() << endl;
         cout << "Data de ingresso: " << listaAsgs[i].getIngressoEmpresa().dia << "/" << listaAsgs[i].getIngressoEmpresa().mes << "/" << listaAsgs[i].getIngressoEmpresa().ano << endl;
         cout << "Adicional de insalubridade: " << listaAsgs[i].getAdicionalInsalubridade() << endl;
-        cout << "\n" << endl;
+        cout << "\n"
+             << endl;
     }
     cout << "----------------------------------------" << endl;
 }
-
-void Empresa::imprimeVendendores() {
+void Empresa::imprimeVendendores()
+{
     std::vector<Vendedor> listaVendedores = getVendedores();
     cout << "\n----- LISTA DE VENDEDORES DA EMPRESA -----" << endl;
-    for(int i = 0; i < listaVendedores.size(); i++) { //Lê cada posicao do vetor de Vendedores e em seguida imprime todos os atributos:
+    for (int i = 0; i < listaVendedores.size(); i++)
+    { // Lê cada posicao do vetor de Vendedores e em seguida imprime todos os atributos:
         cout << "Vendedor numero " << i << ":" << endl;
         cout << "Nome: " << listaVendedores[i].getNome() << endl;
         cout << "CPF: " << listaVendedores[i].getCpf() << endl;
         cout << "Data de nascimento: " << listaVendedores[i].getDataNascimento().dia << "/" << listaVendedores[i].getDataNascimento().mes << "/" << listaVendedores[i].getDataNascimento().ano << endl;
-        cout << "Endereço: " << listaVendedores[i].getEnderecoPessoal().cidade << ", " << listaVendedores[i].getEnderecoPessoal().bairro << ", " << listaVendedores[i].getEnderecoPessoal().cep 
-        << ", Rua " << listaVendedores[i].getEnderecoPessoal().rua << ", " << listaVendedores[i].getEnderecoPessoal().numero << endl;
+        cout << "Endereço: " << listaVendedores[i].getEnderecoPessoal().cidade << ", " << listaVendedores[i].getEnderecoPessoal().bairro << ", " << listaVendedores[i].getEnderecoPessoal().cep
+             << ", Rua " << listaVendedores[i].getEnderecoPessoal().rua << ", " << listaVendedores[i].getEnderecoPessoal().numero << endl;
         cout << "Estado civil: " << listaVendedores[i].getEstadoCivil() << endl;
         cout << "Quantidade de filhos " << listaVendedores[i].getQuantFilhos() << endl;
         cout << "Matricula: " << listaVendedores[i].getMatricula() << endl;
         cout << "Salario: " << listaVendedores[i].getSalario() << endl;
         cout << "Data de ingresso: " << listaVendedores[i].getIngressoEmpresa().dia << "/" << listaVendedores[i].getIngressoEmpresa().mes << "/" << listaVendedores[i].getIngressoEmpresa().ano << endl;
         cout << "Tipo de vendedor: " << listaVendedores[i].getTipoVendedor() << endl;
-        cout << "\n" << endl;
+        cout << "\n"
+             << endl;
     }
     cout << "----------------------------------------" << endl;
 }
-
-void Empresa::imprimeGerentes() {
+void Empresa::imprimeGerentes()
+{
     std::vector<Gerente> listaGerentes = getGerentes();
     cout << "\n----- LISTA DE GERENTES DA EMPRESA -----" << endl;
-    for(int i = 0; i < listaGerentes.size(); i++) { //Lê cada posicao do vetor de Gerentes e em seguida imprime todos os atributos:
+    for (int i = 0; i < listaGerentes.size(); i++)
+    { // Lê cada posicao do vetor de Gerentes e em seguida imprime todos os atributos:
         cout << "Gerente numero " << i << ":" << endl;
         cout << "Nome: " << listaGerentes[i].getNome() << endl;
         cout << "CPF: " << listaGerentes[i].getCpf() << endl;
         cout << "Data de nascimento: " << listaGerentes[i].getDataNascimento().dia << "/" << listaGerentes[i].getDataNascimento().mes << "/" << listaGerentes[i].getDataNascimento().ano << endl;
-        cout << "Endereço: " << listaGerentes[i].getEnderecoPessoal().cidade << ", " << listaGerentes[i].getEnderecoPessoal().bairro << ", " << listaGerentes[i].getEnderecoPessoal().cep 
-        << ", Rua " << listaGerentes[i].getEnderecoPessoal().rua << ", " << listaGerentes[i].getEnderecoPessoal().numero << endl;
+        cout << "Endereço: " << listaGerentes[i].getEnderecoPessoal().cidade << ", " << listaGerentes[i].getEnderecoPessoal().bairro << ", " << listaGerentes[i].getEnderecoPessoal().cep
+             << ", Rua " << listaGerentes[i].getEnderecoPessoal().rua << ", " << listaGerentes[i].getEnderecoPessoal().numero << endl;
         cout << "Estado civil: " << listaGerentes[i].getEstadoCivil() << endl;
         cout << "Quantidade de filhos " << listaGerentes[i].getQuantFilhos() << endl;
         cout << "Matricula: " << listaGerentes[i].getMatricula() << endl;
         cout << "Salario: " << listaGerentes[i].getSalario() << endl;
         cout << "Data de ingresso: " << listaGerentes[i].getIngressoEmpresa().dia << "/" << listaGerentes[i].getIngressoEmpresa().mes << "/" << listaGerentes[i].getIngressoEmpresa().ano << endl;
         cout << "Participação nos lucros: " << listaGerentes[i].getParticipacaoLucros() << endl;
-        cout << "\n" << endl;
+        cout << "\n"
+             << endl;
     }
     cout << "----------------------------------------" << endl;
 }
-
-void Empresa::imprimeDono() {
+void Empresa::imprimeDono()
+{
     cout << "\n----- DONO DA EMPRESA -----" << endl;
     cout << "Nome: " << dono.getNome() << endl;
     cout << "CPF: " << dono.getCpf() << endl;
     cout << "Data de nascimento: " << dono.getDataNascimento().dia << "/" << dono.getDataNascimento().mes << "/" << dono.getDataNascimento().ano << endl;
-    cout << "Endereço: " << dono.getEnderecoPessoal().cidade << ", " << dono.getEnderecoPessoal().bairro << ", " << dono.getEnderecoPessoal().cep 
-    << ", Rua " << dono.getEnderecoPessoal().rua << ", " << dono.getEnderecoPessoal().numero << endl;
+    cout << "Endereço: " << dono.getEnderecoPessoal().cidade << ", " << dono.getEnderecoPessoal().bairro << ", " << dono.getEnderecoPessoal().cep
+         << ", Rua " << dono.getEnderecoPessoal().rua << ", " << dono.getEnderecoPessoal().numero << endl;
     cout << "Estado civil: " << dono.getEstadoCivil() << endl;
     cout << "Quantidade de filhos " << dono.getQuantFilhos() << endl;
-    cout << "\n" << endl;
+    cout << "\n"
+         << endl;
     cout << "----------------------------------------" << endl;
 }
-
-void Empresa::buscaFuncionario(int matricula) {
-    vector<Asg> asgs = getAsgs();
-    vector<Vendedor> vendedores = getVendedores();
-    vector<Gerente> gerentes = getGerentes();
-
+void Empresa::buscaFuncionario(int matricula)
+{
     bool encontrou = false;
 
-    //Buscando funcionario nos vetores de Asgs, vendedores e gerentes:
-    if(encontrou == false){
-        for(int i = 0; i < asgs.size(); i){ //Comparando matricula dos asgs
-            if(stoi(simplificadorMatricula(asgs[i].getMatricula())) == matricula){
+    // Buscando funcionario nos vetores de Asgs, vendedores e gerentes:
+    if (!encontrou)
+    {
+        for (int i = 0; i < asgs.size(); i)
+        { // Comparando matricula dos asgs
+            if (stoi(simplificadorMatricula(asgs[i].getMatricula())) == matricula)
+            {
                 encontrou = true;
                 cout << "\nFuncionário encontrado!" << endl;
                 cout << "\nNOME: " << asgs[i].getNome() << endl;
             }
         }
-    } if(encontrou == false){
-        for(int i = 0; i < vendedores.size(); i){ //Comparando matricula dos vendedores
-            if(stoi(simplificadorMatricula(vendedores[i].getMatricula())) == matricula){
+    }
+    if (!encontrou)
+    {
+        for (int i = 0; i < vendedores.size(); i)
+        { // Comparando matricula dos vendedores
+            if (stoi(simplificadorMatricula(vendedores[i].getMatricula())) == matricula)
+            {
                 encontrou = true;
                 cout << "\nFuncionário encontrado!" << endl;
                 cout << "\nNOME: " << vendedores[i].getNome() << endl;
             }
         }
-    } if(encontrou == false){
-        for(int i = 0; i < gerentes.size(); i){ //Comparando matricula dos gerentes
-            if(stoi(simplificadorMatricula(gerentes[i].getMatricula())) == matricula){
+    }
+    if (!encontrou)
+    {
+        for (int i = 0; i < gerentes.size(); i)
+        { // Comparando matricula dos gerentes
+            if (stoi(simplificadorMatricula(gerentes[i].getMatricula())) == matricula)
+            {
                 encontrou = true;
                 cout << "\nFuncionário encontrado!" << endl;
                 cout << "\nNOME: " << gerentes[i].getNome() << endl;
             }
         }
-    } if(encontrou == false) {
-        cout << "\nFuncionário não encontrado no sistema!\n" << endl;
+    }
+    if (!encontrou)
+    {
+        cout << "\nFuncionário não encontrado no sistema!\n"
+             << endl;
     }
 }
 
-void Empresa::cacularSalarioFuncionario(int matricula) {}
-void Empresa::calcularTodoOsSalarios() {}
-void Empresa::calcularRecisao(int matricula, Data desligamento) {}
+void Empresa::cacularSalarioFuncionario(int matricula)
+{
+
+    cout << "Entrando em calcular salario..." << endl;
+    bool encontrou = false;
+    float salario = 0;
+    // Buscando funcionario nos vetores de Asgs, vendedores e gerentes:
+    if (!encontrou)
+    {
+        for (int i = 0; i < asgs.size(); i)
+        { // Comparando matricula dos asgs
+            if (stoi(simplificadorMatricula(asgs[i].getMatricula())) == matricula)
+            {
+                encontrou = true;
+                cout << "\nFuncionário encontrado!" << endl;
+                cout << "\nNOME: " << asgs[i].getNome() << endl;
+                salario = asgs[i].calcularSalario(asgs[i].getQuantFaltas());
+            }
+        }
+    }
+    if (!encontrou)
+    {
+        for (int i = 0; i < vendedores.size(); i)
+        { // Comparando matricula dos vendedores
+            if (stoi(simplificadorMatricula(vendedores[i].getMatricula())) == matricula)
+            {
+                encontrou = true;
+                cout << "\nFuncionário encontrado!" << endl;
+                cout << "\nNOME: " << vendedores[i].getNome() << endl;
+                salario = vendedores[i].calcularSalario(vendedores[i].getQuantFaltas());
+            }
+        }
+    }
+    if (!encontrou)
+    {
+        for (int i = 0; i < gerentes.size(); i)
+        { // Comparando matricula dos gerentes
+            if (stoi(simplificadorMatricula(gerentes[i].getMatricula())) == matricula)
+            {
+                encontrou = true;
+                cout << "\nFuncionário encontrado!" << endl;
+                cout << "\nNOME: " << gerentes[i].getNome() << endl;
+                salario = gerentes[i].calcularSalario(gerentes[i].getQuantFaltas());
+            }
+        }
+    }
+    if (encontrou)
+    {
+        cout << "Salário: " << salario << endl;
+    }
+    if (!encontrou)
+    {
+        cout << "\nFuncionário não encontrado no sistema!\n"
+             << endl;
+    }
+}
+void Empresa::calcularTodoOsSalarios()
+{
+}
+void Empresa::calcularRecisao(int matricula, Data desligamento)
+{
+    cout << "Entrando em calcular recisão..." << endl;
+    bool encontrou = false;
+    float recisao = 0;
+    // Buscando funcionario nos vetores de Asgs, vendedores e gerentes:
+    if (!encontrou)
+    {
+        for (int i = 0; i < asgs.size(); i)
+        { // Comparando matricula dos asgs
+            if (stoi(simplificadorMatricula(asgs[i].getMatricula())) == matricula)
+            {
+                encontrou = true;
+                cout << "\nFuncionário encontrado!" << endl;
+                cout << "\nNOME: " << asgs[i].getNome() << endl;
+                recisao = asgs[i].calcularRecisao(desligamento);
+            }
+        }
+    }
+    if (!encontrou)
+    {
+        for (int i = 0; i < vendedores.size(); i)
+        { // Comparando matricula dos vendedores
+            if (stoi(simplificadorMatricula(vendedores[i].getMatricula())) == matricula)
+            {
+                encontrou = true;
+                cout << "\nFuncionário encontrado!" << endl;
+                cout << "\nNOME: " << vendedores[i].getNome() << endl;
+                recisao = vendedores[i].calcularRecisao(desligamento);
+            }
+        }
+    }
+    if (!encontrou)
+    {
+        for (int i = 0; i < gerentes.size(); i)
+        { // Comparando matricula dos gerentes
+            if (stoi(simplificadorMatricula(gerentes[i].getMatricula())) == matricula)
+            {
+                encontrou = true;
+                cout << "\nFuncionário encontrado!" << endl;
+                cout << "\nNOME: " << gerentes[i].getNome() << endl;
+                recisao = gerentes[i].calcularRecisao(desligamento);
+            }
+        }
+    }
+    if (encontrou)
+    {
+        cout << "Recisão: " << recisao << endl;
+    }
+    if (!encontrou)
+    {
+        cout << "\nFuncionário não encontrado no sistema!\n"
+             << endl;
+    }
+}
