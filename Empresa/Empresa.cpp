@@ -508,17 +508,15 @@ void Empresa::cacularSalarioFuncionario(int matricula)
     bool encontrou = false;
     float salario = 0;
     // Buscando funcionario nos vetores de Asgs, vendedores e gerentes:
-    if (!encontrou)
-    {
-        for (int i = 0; i < asgs.size(); i)
-        { // Comparando matricula dos asgs
-            if (stoi(simplificadorMatricula(asgs[i].getMatricula())) == matricula)
-            {
-                encontrou = true;
-                cout << "\nFuncionário encontrado!" << endl;
-                cout << "\nNOME: " << asgs[i].getNome() << endl;
-                salario = asgs[i].calcularSalario(asgs[i].getQuantFaltas());
-            }
+
+    for (int i = 0; i < asgs.size(); i)
+    { // Comparando matricula dos asgs
+        if (stoi(simplificadorMatricula(asgs[i].getMatricula())) == matricula)
+        {
+            encontrou = true;
+            cout << "\nFuncionário encontrado!" << endl;
+            cout << "\nNOME: " << asgs[i].getNome() << endl;
+            salario = asgs[i].calcularSalario(asgs[i].getQuantFaltas());
         }
     }
     if (!encontrou)
@@ -559,6 +557,72 @@ void Empresa::cacularSalarioFuncionario(int matricula)
 }
 void Empresa::calcularTodoOsSalarios()
 {
+    fstream arq;
+    cout << "\n";
+    arq.open("./Arquivos/Escrita/relatorio.txt", ios::out);
+    if (!arq.is_open())
+        throw std::runtime_error("Erro ao abrir o arquivo.");
+    else
+    {
+        arq << "######### Relatório Financeiro ########\n"
+            << endl; // Já começa a salva no arquivo
+        double total = 0, totalGeral = 0;
+        arq << "Cargo: ASG" << endl;
+        for (int i = 0; i < asgs.size(); i++) // Aqui começa a gravar todos os dados dos ASGS
+        {
+            float salario = asgs[i].calcularSalario(0);
+            arq << asgs[i].getMatricula() << " - " << asgs[i].getNome() << " - R$ " << salario << endl;
+            total += salario;
+            if (i == asgs.size() - 1) // Quando chegar no ultimo
+            {
+                arq << "Total ASG: R$ " << total << endl; // Grava o total
+                totalGeral += total;                      // E adiciona no total geral
+                total = 0;                                // Zera a variavel para o próximo tipo
+            }
+        }
+        arq << "" << endl;
+        arq << "Cargo: Vendedor" << endl;
+        for (int i = 0; i < vendedores.size(); i++)
+        {
+            float salario = vendedores[i].calcularSalario(0);
+            arq << vendedores[i].getMatricula() << " - " << vendedores[i].getNome() << " - R$ " << salario << endl;
+            total += salario;
+            if (i == vendedores.size() - 1)
+            {
+                arq << "Total Vendedores: R$ " << total << endl;
+                totalGeral += total;
+                total = 0;
+            }
+        }
+        arq << "" << endl;
+        arq << "Cargo: Gerente" << endl;
+        for (int i = 0; i < gerentes.size(); i++)
+        {
+            float salario = gerentes[i].calcularSalario(0);
+            arq << gerentes[i].getMatricula() << " - " << gerentes[i].getNome() << " - R$ " << salario << endl;
+            total += salario;
+            if (i == gerentes.size() - 1)
+            {
+                arq << "Total Gerentes: R$ " << total << endl;
+                totalGeral += total;
+                total = 0;
+            }
+        }
+        arq << "" << endl;
+        arq << "CUSTO TOTAL DE RH: R$ " << totalGeral << endl; // Grava o total geral
+    }
+    arq.close();
+    arq.open("./Arquivos/Escrita/relatorio.txt", ios::in);
+    if (!arq.is_open())
+        throw std::runtime_error("Erro ao abrir o arquivo.");
+    else
+    {
+        cout << "Lendo arquivo relatorio\n"
+             << endl;
+        string linha;
+        while (getline(arq, linha)) // Lê todo o arquivo p imprimir pro usuario
+            cout << linha << endl;
+    }
 }
 void Empresa::calcularRecisao(int matricula, Data desligamento)
 {
@@ -566,19 +630,18 @@ void Empresa::calcularRecisao(int matricula, Data desligamento)
     bool encontrou = false;
     float recisao = 0;
     // Buscando funcionario nos vetores de Asgs, vendedores e gerentes:
-    if (!encontrou)
-    {
-        for (int i = 0; i < asgs.size(); i)
-        { // Comparando matricula dos asgs
-            if (stoi(simplificadorMatricula(asgs[i].getMatricula())) == matricula)
-            {
-                encontrou = true;
-                cout << "\nFuncionário encontrado!" << endl;
-                cout << "\nNOME: " << asgs[i].getNome() << endl;
-                recisao = asgs[i].calcularRecisao(desligamento);
-            }
+
+    for (int i = 0; i < asgs.size(); i)
+    { // Comparando matricula dos asgs
+        if (stoi(simplificadorMatricula(asgs[i].getMatricula())) == matricula)
+        {
+            encontrou = true;
+            cout << "\nFuncionário encontrado!" << endl;
+            cout << "\nNOME: " << asgs[i].getNome() << endl;
+            recisao = asgs[i].calcularRecisao(desligamento);
         }
     }
+
     if (!encontrou)
     {
         for (int i = 0; i < vendedores.size(); i)
