@@ -60,11 +60,6 @@ void Empresa::carregarFuncoes()
             {
                 carregarEmpresa();
             }
-            catch (int error) // Caso o error 0 (defini esse erro para abertura do arquivo) tenha sido lançado
-            {
-                if (error == 0)
-                    cout << "Error ao abrir o arquivo da empresa" << endl;
-            }
             catch (const std::exception &e)
             {
                 std::cerr << e.what() << '\n';
@@ -141,14 +136,9 @@ void Empresa::carregarFuncoes()
             {
                 calcularTodoOsSalarios();
             }
-            catch (int error)
-            { // Como a função escreve e lê no arquivo, conferi os dois
-                if (error == 0)
-                    cout << "Error ao abrir o arquivo do relátorio" << endl;
-                if (error == 1)
-                    cout << "Error ao abrir o arquivo do relátorio para leitura" << endl;
-                else
-                    cout << error << endl;
+            catch (const std::exception &e)
+            {
+                std::cerr << e.what() << '\n';
             }
         };
         if (linha == "calcularRecisao()")
@@ -161,16 +151,13 @@ void Empresa::carregarFuncoes()
                 desligamento.dia = stoi(linhas[++i]);
                 calcularRecisao(stoi(simplificadorMatricula(linhas[++i])), desligamento);
             }
-            catch (int e)
+            catch (const std::exception &e)
             {
-                if (e == 1)
-                    cout << "A data de desligamento é inferior a data de ingresso" << endl;
+                std::cerr << e.what() << '\n';
             }
-            break;
         }
     }
 }
-
 void Empresa::carregarEmpresa()
 {
     std::vector<std::string> dadosEmpresa(3);
@@ -209,7 +196,6 @@ void Empresa::carregarEmpresa()
 
     std::cout << "Carregou empresa com sucesso." << std::endl;
 }
-
 void Empresa::carregarAsg()
 {
     fstream arq;
@@ -251,7 +237,6 @@ void Empresa::carregarAsg()
         }
     }
 }
-
 void Empresa::carregarVendedor()
 {
     fstream arq;
@@ -290,7 +275,6 @@ void Empresa::carregarVendedor()
         }
     }
 }
-
 void Empresa::carregarGerente()
 {
     fstream arq;
@@ -334,7 +318,6 @@ void Empresa::carregarGerente()
         }
     }
 }
-
 void Empresa::carregarDono()
 {
     std::vector<std::string> dadosDono(12);
@@ -500,7 +483,6 @@ void Empresa::buscaFuncionario(int matricula)
              << endl;
     }
 }
-
 void Empresa::cacularSalarioFuncionario(int matricula)
 {
 
@@ -628,6 +610,7 @@ void Empresa::calcularRecisao(int matricula, Data desligamento)
 {
     cout << "Entrando em calcular recisão..." << endl;
     bool encontrou = false;
+    Data ingresso;
     float recisao = 0;
     // Buscando funcionario nos vetores de Asgs, vendedores e gerentes:
 
@@ -639,6 +622,7 @@ void Empresa::calcularRecisao(int matricula, Data desligamento)
             cout << "\nFuncionário encontrado!" << endl;
             cout << "\nNOME: " << asgs[i].getNome() << endl;
             recisao = asgs[i].calcularRecisao(desligamento);
+            ingresso = asgs[i].getIngressoEmpresa();
         }
     }
 
@@ -652,6 +636,7 @@ void Empresa::calcularRecisao(int matricula, Data desligamento)
                 cout << "\nFuncionário encontrado!" << endl;
                 cout << "\nNOME: " << vendedores[i].getNome() << endl;
                 recisao = vendedores[i].calcularRecisao(desligamento);
+                ingresso = vendedores[i].getIngressoEmpresa();
             }
         }
     }
@@ -665,12 +650,20 @@ void Empresa::calcularRecisao(int matricula, Data desligamento)
                 cout << "\nFuncionário encontrado!" << endl;
                 cout << "\nNOME: " << gerentes[i].getNome() << endl;
                 recisao = gerentes[i].calcularRecisao(desligamento);
+                ingresso = gerentes[i].getIngressoEmpresa();
             }
         }
     }
     if (encontrou)
     {
-        cout << "Recisão: " << recisao << endl;
+        if ((ingresso.mes > desligamento.mes) && (ingresso.ano >= desligamento.ano))
+        {
+            throw std::runtime_error("A data de desligamento é inferior a data de ingresso, não é possivel calcular recisão");
+        }
+        else
+        {
+            cout << "Recisão: " << recisao << endl;
+        }
     }
     if (!encontrou)
     {
