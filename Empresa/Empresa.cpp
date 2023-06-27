@@ -656,7 +656,7 @@ void Empresa::calcularRecisao(int matricula, Data desligamento)
     }
     if (encontrou)
     {
-        if ((ingresso.mes > desligamento.mes) && (ingresso.ano >= desligamento.ano))
+        if ((ingresso.mes > desligamento.mes) && (ingresso.ano >= desligamento.ano) || (ingresso.mes >= desligamento.mes) && (ingresso.ano > desligamento.ano))
         {
             throw std::runtime_error("A data de desligamento é inferior a data de ingresso, não é possivel calcular recisão");
         }
