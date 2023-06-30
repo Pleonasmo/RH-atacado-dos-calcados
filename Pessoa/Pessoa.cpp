@@ -15,6 +15,7 @@ Pessoa::Pessoa(std::string nome, std::string cpf, int dia, int mes, int ano, std
     this->enderecoPessoal.numero = numero;
     this->enderecoPessoal.rua = rua;
     this->quantFilhos = quantFilhos;
+    this->estadoCivil = estadoCivil;
 }
 std::string Pessoa::getNome() { return nome; }
 void Pessoa::setNome(std::string nome) { this->nome = nome; }

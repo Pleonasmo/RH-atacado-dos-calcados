@@ -3,23 +3,24 @@
 
 using namespace std;
 
-//Construtores:
+// Construtores:
 Gerente::Gerente() {}
 Gerente::Gerente(std::string nome, std::string cpf, std::string estadoCivil, int diaN, int mesN, int anoN, std::string cidade, std::string bairro, std::string rua, std::string cep, int numero, int quantFilhos,
-                 std::string salario, std::string matricula, int dia, int mes, int ano, float participacaoLucros)
-    : Pessoa(nome, cpf, dia, mes, ano, estadoCivil, cidade, bairro, rua, cep, numero, quantFilhos)
+                 std::string salario, std::string matricula, int dia, int mes, int ano, float participacaoLucros, int quantFaltas)
+    : Pessoa(nome, cpf, diaN, mesN, anoN, estadoCivil, cidade, bairro, rua, cep, numero, quantFilhos)
 {
     setSalario(salario);
     setMatricula(matricula);
     setIngressoEmpresa(dia, mes, ano);
     this->participacaoLucros = participacaoLucros;
+    setQuantFaltas(quantFaltas);
 }
 
-//Getters e Setters:
+// Getters e Setters:
 float Gerente::getParticipacaoLucros() { return participacaoLucros; }
 void Gerente::setParticipacaoLucros(float participacaoLucros) { this->participacaoLucros = participacaoLucros; }
 
-//Metodos virtuais sobrescritos de Funcionario:
+// Metodos virtuais sobrescritos de Funcionario:
 float Gerente::calcularSalario(int diasFaltas)
 {
     float salario;
