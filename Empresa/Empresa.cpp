@@ -582,61 +582,84 @@ void Empresa::cacularSalarioFuncionario(int matricula)
 void Empresa::calcularTodoOsSalarios()
 {
     cout << "Entrou em calcular todos os salarios" << endl;
-    fstream arq;
+    fstream arq, arquivoRelatorio;
     cout << "\n";
     arq.open("./Arquivos/Escrita/relatorio.txt", ios::out);
     if (!arq.is_open())
-        throw std::runtime_error("Erro ao abrir o arquivo.");
+        throw std::runtime_error("Erro ao abrir o arquivo do relatorio.");
+    arquivoRelatorio.open("./Arquivos/Escrita/relatorioFinanceiro.txt", ios::out);
+    if (!arquivoRelatorio.is_open())
+        throw std::runtime_error("Erro ao abrir o arquivo de relatorio Financeiro.");
     else
     {
         arq << "######### Relatório Financeiro ########\n"
             << endl; // Já começa a salva no arquivo
-        double total = 0, totalGeral = 0;
+        arquivoRelatorio << "######### Relatório Financeiro ########\n"
+                         << endl;
+        double totalGeral = 0, lucro = 0;
+        vector<double> total = {0, 0, 0};
         arq << "Cargo: ASG" << endl;
+        arquivoRelatorio << "Cargo: ASG" << endl;
         for (int i = 0; i < asgs.size(); i++) // Aqui começa a gravar todos os dados dos ASGS
         {
             float salario = asgs[i].calcularSalario(0);
             arq << asgs[i].getMatricula() << " - " << asgs[i].getNome() << " - R$ " << salario << endl;
-            total += salario;
+            arquivoRelatorio << asgs[i].getMatricula() << " - " << asgs[i].getNome() << " - R$ " << salario << endl;
+            total[0] += salario;
             if (i == asgs.size() - 1) // Quando chegar no ultimo
             {
-                arq << "Total ASG: R$ " << total << endl; // Grava o total
-                totalGeral += total;                      // E adiciona no total geral
-                total = 0;                                // Zera a variavel para o próximo tipo
+                arq << "Total ASG: R$ " << total[0] << endl;              // Grava o total
+                arquivoRelatorio << "Total ASG: R$ " << total[0] << endl; // Grava o total
+                totalGeral += total[0];                                   // Zera a variavel para o próximo tipo
             }
         }
-        arq << "" << endl;
-        arq << "Cargo: Vendedor" << endl;
+        arq << "\nCargo: Vendedor" << endl;
+        arquivoRelatorio << "\nCargo: Vendedor" << endl;
         for (int i = 0; i < vendedores.size(); i++)
         {
             float salario = vendedores[i].calcularSalario(0);
             arq << vendedores[i].getMatricula() << " - " << vendedores[i].getNome() << " - R$ " << salario << endl;
-            total += salario;
+            arquivoRelatorio << vendedores[i].getMatricula() << " - " << vendedores[i].getNome() << " - R$ " << salario << endl;
+            total[1] += salario;
             if (i == vendedores.size() - 1)
             {
-                arq << "Total Vendedores: R$ " << total << endl;
-                totalGeral += total;
-                total = 0;
+                arq << "Total Vendedores: R$ " << total[1] << endl;
+                arquivoRelatorio << "Total Vendedores: R$ " << total[1] << endl;
+                totalGeral += total[1];
             }
         }
-        arq << "" << endl;
-        arq << "Cargo: Gerente" << endl;
+        arq << "\nCargo: Gerente" << endl;
+        arquivoRelatorio << "\nCargo: Gerente" << endl;
         for (int i = 0; i < gerentes.size(); i++)
         {
             float salario = gerentes[i].calcularSalario(0);
             arq << gerentes[i].getMatricula() << " - " << gerentes[i].getNome() << " - R$ " << salario << endl;
-            total += salario;
+            arquivoRelatorio << gerentes[i].getMatricula() << " - " << gerentes[i].getNome() << " - R$ " << salario << endl;
+            total[2] += salario;
             if (i == gerentes.size() - 1)
             {
-                arq << "Total Gerentes: R$ " << total << endl;
-                totalGeral += total;
-                total = 0;
+                arq << "Total Gerentes: R$ " << total[2] << endl;
+                arquivoRelatorio << "Total Gerentes: R$ " << total[2] << endl;
+                totalGeral += total[2];
             }
         }
-        arq << "" << endl;
-        arq << "CUSTO TOTAL DE RH: R$ " << totalGeral << endl; // Grava o total geral
+        arq << "\nCUSTO TOTAL DE RH: R$ " << totalGeral << endl; // Grava o total geral
+        arq.close();
+        arquivoRelatorio << "\nCUSTO TOTAL: R$ " << totalGeral << endl; // Grava o total geral
+        arquivoRelatorio << "\nFATURAMENTO MENSAL: R$" << faturamentoMensal << endl;
+        arquivoRelatorio << "PERCENTUAL DE ASGS SOB TOTAL: " << round((total[0] * 100) / faturamentoMensal) << "\%" << endl;
+        arquivoRelatorio << "PERCENTUAL DE VENDEDORES SOB TOTAL: " << round((total[1] * 100) / faturamentoMensal) << "\%" << endl;
+        arquivoRelatorio << "PERCENTUAL DE GERENTES SOB TOTAL: " << round((total[2] * 100) / faturamentoMensal) << "\%" << endl;
+
+        lucro = faturamentoMensal - totalGeral;
+        arquivoRelatorio << "\nLUCRO DA EMPRESA: R$" << lucro << endl;
+        arquivoRelatorio << "\nSITUAÇÃO: ";
+        if (lucro > 0)
+            arquivoRelatorio << "LUCRO" << endl;
+        else
+            arquivoRelatorio << "PREJUIZO" << endl;
     }
-    arq.close();
+    arquivoRelatorio.close();
     arq.open("./Arquivos/Escrita/relatorio.txt", ios::in);
     if (!arq.is_open())
         throw std::runtime_error("Erro ao abrir o arquivo.");
