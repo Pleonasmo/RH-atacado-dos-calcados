@@ -980,7 +980,6 @@ void Empresa::contratarFuncionario()
         {
             if (cargo == "ASG")
             {
-                cout << "Entrou em ASG!" << endl;
                 contador = 0;
                 try
                 {
@@ -1035,6 +1034,14 @@ void Empresa::contratarFuncionario()
                         << asgs[i].getIngressoEmpresa().dia << endl;
 
                 arquivo.close();
+
+                cout << "\n#######################\nFuncionario contratado com sucesso!\n#######################\n";
+                cout << "Nome: " << asgs[i].getNome() << endl;
+                cout << "CPF: " << asgs[i].getCpf() << endl;
+                cout << "Data de nascimento: " << asgs[i].getDataNascimento().dia << "/" << asgs[i].getDataNascimento().mes << "/" << asgs[i].getDataNascimento().ano << endl;
+                cout << "Matricula: " << asgs[i].getMatricula() << endl;
+                cout << "Salario: " << asgs[i].getSalario() << endl;
+                cout << "########################################\n";
             }
             else if (cargo == "VENDEDOR")
             {
@@ -1090,8 +1097,15 @@ void Empresa::contratarFuncionario()
                 arquivo << vendedores[i].getIngressoEmpresa().mes << endl;
                 arquivo << vendedores[i].getIngressoEmpresa().dia << endl;
 
-                contador++;
                 arquivo.close();
+
+                cout << "\n#######################\nFuncionario contratado com sucesso!\n#######################\n";
+                cout << "Nome: " << vendedores[i].getNome() << endl;
+                cout << "CPF: " << vendedores[i].getCpf() << endl;
+                cout << "Data de nascimento: " << vendedores[i].getDataNascimento().dia << "/" << vendedores[i].getDataNascimento().mes << "/" << vendedores[i].getDataNascimento().ano << endl;
+                cout << "Matricula: " << vendedores[i].getMatricula() << endl;
+                cout << "Salario: " << vendedores[i].getSalario() << endl;
+                cout << "########################################\n";
             }
             else if (cargo == "GERENTE")
             {
@@ -1150,8 +1164,14 @@ void Empresa::contratarFuncionario()
                 arquivo << gerentes[i].getIngressoEmpresa().mes << endl;
                 arquivo << gerentes[i].getIngressoEmpresa().dia << endl;
 
-                contador++;
                 arquivo.close();
+                cout << "\n#######################\nFuncionario contratado com sucesso!\n#######################\n";
+                cout << "Nome: " << gerentes[i].getNome() << endl;
+                cout << "CPF: " << gerentes[i].getCpf() << endl;
+                cout << "Data de nascimento: " << gerentes[i].getDataNascimento().dia << "/" << gerentes[i].getDataNascimento().mes << "/" << gerentes[i].getDataNascimento().ano << endl;
+                cout << "Matricula: " << gerentes[i].getMatricula() << endl;
+                cout << "Salario: " << gerentes[i].getSalario() << endl;
+                cout << "########################################\n";
             }
         }
     }
