@@ -44,5 +44,7 @@ public:
     void cacularSalarioFuncionario(int matricula);
     void calcularTodoOsSalarios();
     void calcularRecisao(int matricula, Data desligamento);
+    void demitirFuncionario(int matricula, Data desligamento);
+    void contratarFuncionario();
 };
 #endif

@@ -47,12 +47,17 @@ float Asg::calcularSalario(int diasFaltas)
 
 float Asg::calcularRecisao(Data desligamento)
 {
-    float ganhoRDia = stof(getSalario()) / 365;                        // Pega o valor ganho por dia no ano
-    float ganhoPMes = stof(getSalario()) / 12;                         // Pega o valor ganho por mes no ano
-    int quantAnos = fabs(getIngressoEmpresa().ano - desligamento.ano); // A quantidade de anos é o modulo do desligamento - ingresso
-    int quantMes = getIngressoEmpresa().mes - desligamento.mes;        // Quantidade de mês
-    int quantDias = fabs(getIngressoEmpresa().dia - desligamento.dia); // Modulo da quantidade de dias
-    if (quantMes == 0 && quantAnos >= 1)                               // Se a quantidade de mês é 0, então tem um ano de diferença entre as datas
+    float ganhoRDia = stof(getSalario()) / 365;                            // Pega o valor ganho por dia no ano
+    float ganhoPMes = stof(getSalario()) / 12;                             // Pega o valor ganho por mes no ano
+    int quantAnos = fabs(getIngressoEmpresa().ano - desligamento.ano) - 1; // A quantidade de anos é o modulo do desligamento - ingresso
+    int quantMes = getIngressoEmpresa().mes - desligamento.mes;            // Quantidade de mês
+    int quantDias = fabs(getIngressoEmpresa().dia - desligamento.dia);     // Modulo da quantidade de dias
+    if (desligamento.dia > getIngressoEmpresa().dia)
+        quantMes = desligamento.dia - getIngressoEmpresa().dia;
+    if (desligamento.dia < getIngressoEmpresa().dia)
+        quantDias = 30 + (desligamento.dia - getIngressoEmpresa().dia);
+
+    if (quantMes == 0 && quantAnos >= 1) // Se a quantidade de mês é 0, então tem um ano de diferença entre as datas
         quantMes = 12;
     if (quantMes > 0) // Se a quantidade de mês é maior que 0, então tem menos de ano
         quantMes = 12 - quantMes;

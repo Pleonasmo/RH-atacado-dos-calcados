@@ -1,7 +1,7 @@
 #########################################################
 VENDEDOR Nº: 0
 ##### DADOS PESSOAIS #####
-Andre de Albuquerque de Souza
+Luiz de Souza
 320.078.587-15
 1
 casado
@@ -16,10 +16,10 @@ Dr. Antonio Souza
 8
 25
 ##### DADOS FUNCIONAIS #####
-72.487-3
-2200
+72.412-3
+1500
 B
-2
+0
 ***** Data de ingresso (ano, mes, dia) ****
 2015
 6
@@ -27,7 +27,7 @@ B
 #########################################################
 VENDEDOR Nº: 1
 ##### DADOS PESSOAIS #####
-Suziane Augusta Maria de Souza
+Suziane Maria
 895.562.415-09
 2
 casado
@@ -42,10 +42,10 @@ Luiz XV
 7
 20
 ##### DADOS FUNCIONAIS #####
-72.222-9
+72.123-7
 1500
 A
-3
+1
 ***** Data de ingresso (ano, mes, dia) ****
 2014
 4
@@ -68,10 +68,10 @@ Pedro Borges
 2
 3
 ##### DADOS FUNCIONAIS #####
-72.379-2
+72.874-1
 1500
 C
-0
+3
 ***** Data de ingresso (ano, mes, dia) ****
 2019
 5
@@ -79,7 +79,7 @@ C
 #########################################################
 VENDEDOR Nº: 3
 ##### DADOS PESSOAIS #####
-Maximus Decimus Meridius
+Guilherme Borba Dias
 012.874.523-45
 0
 solteiro
@@ -94,10 +94,10 @@ Ibirabuera Vieira
 12
 5
 ##### DADOS FUNCIONAIS #####
-72.554-1
+72.125-6
 1500
 A
-3
+0
 ***** Data de ingresso (ano, mes, dia) ****
 2021
 2
@@ -120,10 +120,10 @@ Nevaldo Rocha
 11
 27
 ##### DADOS FUNCIONAIS #####
-72.252-4
-1708
+72.254-6
+1500
 A
-6
+2
 ***** Data de ingresso (ano, mes, dia) ****
 2008
 12

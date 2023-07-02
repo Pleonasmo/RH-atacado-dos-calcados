@@ -1,0 +1,13 @@
+##############################
+    Relatorio Demissional
+##############################
+Cargo: ASG
+Nome: Pedro de Araujo
+CPF: 658.897.745-45
+Matricula: 72.385-9
+Data de ingresso: 30/9/2017
+Data de desligamento: 28/2/2020
+******************************
+Valor de rescisao: R$ 1877.23
+******************************
+Tempo de trabalho: 2 anos, 5 meses e 28 dias
