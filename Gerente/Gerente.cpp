@@ -64,4 +64,5 @@ float Gerente::calcularRecisao(Data desligamento)
         quantMes = 12 + fabs(quantMes);
     if (quantAnos > 1) // Se tiver mais de 1, soma a quantidade de meses
         quantMes += 12 * (quantAnos - 1);
-    return ((ganhoRDia * quantDias) + (ganhoPMes * quantMes)); // Soma o produto dos dias com o valor por dia e da quantidade de mes com o ganho por mes}
+    return ((ganhoRDia * quantDias) + (ganhoPMes * quantMes)); // Soma o produto dos dias com o valor por dia e da quantidade de mes com o ganho por mes
+}

@@ -933,7 +933,7 @@ void Empresa::demitirFuncionario(int matricula, Data desligamento)
     }
     arquivo.close();
 
-    cout << "Arquivo do funcionario atualizado" << endl;
+    cout << "\nArquivo do funcionario atualizado com sucesso" << endl;
 }
 void Empresa::contratarFuncionario()
 {

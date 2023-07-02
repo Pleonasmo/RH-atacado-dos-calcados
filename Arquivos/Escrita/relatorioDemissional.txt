@@ -2,12 +2,12 @@
     Relatorio Demissional
 ##############################
 Cargo: ASG
-Nome: Pedro de Araujo
-CPF: 658.897.745-45
-Matricula: 72.385-9
-Data de ingresso: 30/9/2017
+Nome: Jorge Linhares
+CPF: 148.879.265-70
+Matricula: 72.102-0
+Data de ingresso: 5/7/2005
 Data de desligamento: 28/2/2020
 ******************************
-Valor de rescisao: R$ 1877.23
+Valor de rescisao: R$ 19773.2
 ******************************
-Tempo de trabalho: 2 anos, 5 meses e 28 dias
+Tempo de trabalho: 14 anos, 7 meses e 23 dias
