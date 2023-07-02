@@ -1,6 +1,9 @@
 #include "Empresa.hpp"
 #include <math.h>
+#include <string.h>
+#include <cstring>
 #include <fstream>
+#include <cctype>
 
 using namespace std;
 
@@ -167,6 +170,17 @@ void Empresa::carregarFuncoes()
                 desligamento.mes = stoi(linhas[++i]);
                 desligamento.dia = stoi(linhas[++i]);
                 demitirFuncionario(matricula, desligamento);
+            }
+            catch (const std::exception &e)
+            {
+                std::cerr << e.what() << '\n';
+            }
+        }
+        if (linhas[i] == "contratarFuncionario()")
+        {
+            try
+            {
+                contratarFuncionario();
             }
             catch (const std::exception &e)
             {
@@ -399,7 +413,6 @@ void Empresa::imprimeAsgs()
     }
     cout << "----------------------------------------" << endl;
 }
-
 void Empresa::imprimeVendendores()
 {
     std::vector<Vendedor> listaVendedores = getVendedores();
@@ -853,6 +866,7 @@ void Empresa::demitirFuncionario(int matricula, Data desligamento)
                 contador++;
             }
         }
+        asgs.erase(asgs.begin() + posicaoFuncionario);
     }
     if (cargo == "Vendedor")
     {
@@ -891,6 +905,7 @@ void Empresa::demitirFuncionario(int matricula, Data desligamento)
                 contador++;
             }
         }
+        vendedores.erase(vendedores.begin() + posicaoFuncionario);
     }
 
     if (cargo == "Gerente")
@@ -930,6 +945,7 @@ void Empresa::demitirFuncionario(int matricula, Data desligamento)
                 contador++;
             }
         }
+        gerentes.erase(gerentes.begin() + posicaoFuncionario);
     }
     arquivo.close();
 
@@ -937,4 +953,207 @@ void Empresa::demitirFuncionario(int matricula, Data desligamento)
 }
 void Empresa::contratarFuncionario()
 {
+
+    cout << "Contratar Funcionario " << endl;
+    string linha, cargo;
+    int contador = 0;
+    vector<string> palavras;
+
+    fstream arq;
+    arq.open("./Arquivos/Leitura/novoFuncionario.txt", ios::in);
+    if (!arq.is_open())
+        throw std::runtime_error("Erro ao abrir o arquivo de novo funcionario");
+    while (getline(arq, linha))
+    {
+        if (contador == 0)
+            cargo = linha;
+
+        if ((linha[0] != '#') && (linha[0] != '*') && contador != 0)
+            palavras.push_back(linha);
+
+        contador++;
+
+        for (int i = 0; i < cargo.length(); i++)
+            cargo[i] = toupper(cargo[i]);
+
+        if (contador == 24)
+        {
+            if (cargo == "ASG")
+            {
+                cout << "Entrou em ASG!" << endl;
+                contador = 0;
+                try
+                {
+                    Asg asg;
+                    asg.setNome(palavras[0]);
+                    asg.setCpf(palavras[1]);
+                    asg.setQuantFilhos(stoi(palavras[2]));
+                    asg.setEstadoCivil(palavras[3]);
+                    asg.setEnderecoPessoal(palavras[4], palavras[5], palavras[6], palavras[7], stoi(palavras[8]));
+                    asg.setDataNascimento(stoi(palavras[11]), stoi(palavras[10]), stoi(palavras[9]));
+                    asg.setMatricula(palavras[12]);
+                    asg.setSalario(palavras[13]);
+                    asg.setAdicionalInsalubridade(stof(palavras[14]));
+                    asg.setQuantFaltas(stoi(palavras[15]));
+                    asg.setIngressoEmpresa(stoi(palavras[18]), stoi(palavras[17]), stoi(palavras[16]));
+
+                    this->asgs.push_back(asg); // Cria o ASG, adiciona no fim do vector e depois limpa o vector, para armazenar o próximo ASG
+                }
+                catch (invalid_argument &e)
+                {
+                    cout << "Não foi possivel carregar asg, erro ao converter um dos parametros para número" << endl;
+                }
+                palavras.clear();
+
+                int i = asgs.size() - 1;
+
+                fstream arquivo;
+                arquivo.open("./Arquivos/Leitura/asg.txt", ios::out | ios::app);
+                arquivo << "#########################################################\nASG Nº : " << asgs.size() - 1 << "\n#####DADOS PESSOAIS#####\n";
+                arquivo << asgs[i].getNome() << "\n"
+                        << asgs[i].getCpf() << "\n"
+                        << asgs[i].getQuantFilhos() << "\n"
+                        << asgs[i].getEstadoCivil() << endl;
+                arquivo << "*****Endereço(cidade, cep, bairro, rua e numero) *****\n";
+                arquivo << asgs[i].getEnderecoPessoal().cidade << "\n"
+                        << asgs[i].getEnderecoPessoal().cep << "\n"
+                        << asgs[i].getEnderecoPessoal().bairro << "\n"
+                        << asgs[i].getEnderecoPessoal().rua << "\n"
+                        << asgs[i].getEnderecoPessoal().numero << endl;
+                arquivo << "*****Data de nascimento(ano, mes, dia) ****\n";
+                arquivo << asgs[i].getDataNascimento().ano << "\n"
+                        << asgs[i].getDataNascimento().mes << "\n"
+                        << asgs[i].getDataNascimento().dia << endl;
+                arquivo << "##### DADOS FUNCIONAIS #####\n";
+                arquivo << asgs[i].getMatricula() << "\n"
+                        << asgs[i].getSalario() << "\n"
+                        << asgs[i].getAdicionalInsalubridade() << "\n"
+                        << asgs[i].getQuantFaltas() << endl;
+                arquivo << "***** Data de ingresso (ano, mes, dia) ****\n";
+                arquivo << asgs[i].getIngressoEmpresa().ano << "\n"
+                        << asgs[i].getIngressoEmpresa().mes << "\n"
+                        << asgs[i].getIngressoEmpresa().dia << endl;
+
+                arquivo.close();
+            }
+            else if (cargo == "VENDEDOR")
+            {
+                char tipoVendedor = (palavras[14])[0]; // Como a linha é uma string, ele pega apenas a primeira posição
+                                                       // ai fica um char
+                try                                    // Caso não consiga converter alguma linha, tive muito problema com isso ;)
+                {
+                    Vendedor vendedor(palavras[0], palavras[1], palavras[3],
+                                      stoi(palavras[11]), stoi(palavras[10]), stoi(palavras[9]), palavras[4],
+                                      palavras[6], palavras[7], palavras[5],
+                                      stoi(palavras[8]), stoi(palavras[2]), palavras[13],
+                                      palavras[12], stoi(palavras[18]), stoi(palavras[17]),
+                                      stoi(palavras[16]), tipoVendedor, stoi(palavras[15]));
+
+                    this->vendedores.push_back(vendedor);
+                }
+                catch (invalid_argument &e)
+                {
+                    cout << "Não foi possivel carregar vendedor, erro ao converter um dos parametros para número" << endl;
+                }
+
+                palavras.clear();
+
+                int i = vendedores.size() - 1;
+
+                fstream arquivo;
+                arquivo.open("./Arquivos/Leitura/vendedor.txt", ios::out | ios::app);
+                if (!arquivo.is_open())
+                    throw runtime_error("Erro ao abrir arquivo do Vendedor");
+
+                arquivo << "#########################################################\nVENDEDOR Nº :" << i << "\n#####DADOS PESSOAIS#####\n";
+                arquivo << vendedores[i].getNome() << endl;
+                arquivo << vendedores[i].getCpf() << endl;
+                arquivo << vendedores[i].getQuantFilhos() << endl;
+                arquivo << vendedores[i].getEstadoCivil() << endl;
+                arquivo << "*****Endereço(cidade, cep, bairro, rua e numero) *****\n";
+                arquivo << vendedores[i].getEnderecoPessoal().cidade << endl;
+                arquivo << vendedores[i].getEnderecoPessoal().cep << endl;
+                arquivo << vendedores[i].getEnderecoPessoal().bairro << endl;
+                arquivo << vendedores[i].getEnderecoPessoal().rua << endl;
+                arquivo << vendedores[i].getEnderecoPessoal().numero << endl;
+                arquivo << "*****Data de nascimento(ano, mes, dia) ****\n";
+                arquivo << vendedores[i].getDataNascimento().ano << endl;
+                arquivo << vendedores[i].getDataNascimento().mes << endl;
+                arquivo << vendedores[i].getDataNascimento().dia << endl;
+                arquivo << "##### DADOS FUNCIONAIS #####\n";
+                arquivo << vendedores[i].getMatricula() << endl;
+                arquivo << vendedores[i].getSalario() << endl;
+                arquivo << vendedores[i].getTipoVendedor() << endl;
+                arquivo << vendedores[i].getQuantFaltas() << endl;
+                arquivo << "***** Data de ingresso (ano, mes, dia) ****\n";
+                arquivo << vendedores[i].getIngressoEmpresa().ano << endl;
+                arquivo << vendedores[i].getIngressoEmpresa().mes << endl;
+                arquivo << vendedores[i].getIngressoEmpresa().dia << endl;
+
+                contador++;
+                arquivo.close();
+            }
+            else if (cargo == "GERENTE")
+            {
+                try
+                {
+                    contador = 0;
+                    Gerente gerente;
+                    gerente.setNome(palavras[0]);
+                    gerente.setCpf(palavras[1]);
+                    gerente.setQuantFilhos(stoi(palavras[2]));
+                    gerente.setEstadoCivil(palavras[3]);
+                    gerente.setEnderecoPessoal(palavras[4], palavras[6], palavras[7], palavras[5], stoi(palavras[8]));
+                    gerente.setDataNascimento(stoi(palavras[11]), stoi(palavras[10]), stoi(palavras[9]));
+                    gerente.setMatricula(palavras[12]);
+                    gerente.setSalario(palavras[13]);
+                    gerente.setParticipacaoLucros(stof(palavras[14]));
+                    gerente.setIngressoEmpresa(stoi(palavras[17]), stoi(palavras[16]), stoi(palavras[15]));
+
+                    this->gerentes.push_back(gerente);
+                }
+                catch (invalid_argument &e)
+                {
+                    cout << "Não foi possivel carregar gerente, erro ao converter um dos parametros para número" << endl;
+                }
+                palavras.clear();
+
+                int i = gerentes.size() - 1;
+
+                fstream arquivo;
+                arquivo.open("./Arquivos/Leitura/gerente.txt", ios::out | ios::app);
+                if (!arquivo.is_open())
+                    throw runtime_error("Erro ao abrir arquivo dos Gerentes");
+
+                arquivo << "#########################################################\nVENDEDOR Nº : " << contador << "\n#####DADOS PESSOAIS#####\n";
+                arquivo << gerentes[i].getNome() << endl;
+                arquivo << gerentes[i].getCpf() << endl;
+                arquivo << gerentes[i].getQuantFilhos() << endl;
+                arquivo << gerentes[i].getEstadoCivil() << endl;
+                arquivo << "*****Endereço(cidade, cep, bairro, rua e numero) *****\n";
+                arquivo << gerentes[i].getEnderecoPessoal().cidade << endl;
+                arquivo << gerentes[i].getEnderecoPessoal().cep << endl;
+                arquivo << gerentes[i].getEnderecoPessoal().bairro << endl;
+                arquivo << gerentes[i].getEnderecoPessoal().rua << endl;
+                arquivo << gerentes[i].getEnderecoPessoal().numero << endl;
+                arquivo << "*****Data de nascimento(ano, mes, dia) ****\n";
+                arquivo << gerentes[i].getDataNascimento().ano << endl;
+                arquivo << vendedores[i].getDataNascimento().mes << endl;
+                arquivo << vendedores[i].getDataNascimento().dia << endl;
+                arquivo << "##### DADOS FUNCIONAIS #####\n";
+                arquivo << gerentes[i].getMatricula() << endl;
+                arquivo << gerentes[i].getSalario() << endl;
+                arquivo << gerentes[i].getParticipacaoLucros() << endl;
+                arquivo << gerentes[i].getQuantFaltas() << endl;
+                arquivo << "***** Data de ingresso (ano, mes, dia) ****\n";
+                arquivo << gerentes[i].getIngressoEmpresa().ano << endl;
+                arquivo << gerentes[i].getIngressoEmpresa().mes << endl;
+                arquivo << gerentes[i].getIngressoEmpresa().dia << endl;
+
+                contador++;
+                arquivo.close();
+            }
+        }
+    }
+    arq.close();
 }

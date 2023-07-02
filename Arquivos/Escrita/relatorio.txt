@@ -1,10 +1,8 @@
 ######### Relatório Financeiro ########
 
 Cargo: ASG
-72.385-9 - Pedro de Araujo - R$ 1386
-72.102-0 - Jorge Linhares - R$ 1586
 72.280-8 - Antonio Augusto de Souza Filho - R$ 1486
-Total ASG: R$ 4458
+Total ASG: R$ 1486
 
 Cargo: Vendedor
 72.412-3 - Luiz de Souza - R$ 1600
@@ -18,4 +16,4 @@ Cargo: Gerente
 72.412-3 - Gustavo Luiz de Souza - R$ 3100
 Total Gerentes: R$ 3100
 
-CUSTO TOTAL DE RH: R$ 15458
+CUSTO TOTAL DE RH: R$ 12486

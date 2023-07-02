@@ -13,7 +13,7 @@ calculaSalarioFuncionario()
 72.280-8
 calculaTodoOsSalarios()
 demitirFuncionario()
-72.102-0
+72.385-9
 2020
 02
 28
