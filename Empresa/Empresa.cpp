@@ -30,7 +30,7 @@ std::vector<Gerente> Empresa::getGerentes() { return gerentes; }
 
 // Outros metodos:
 
-string simplificadorMatricula(string matricula) // Função para tirar ponto e - da matricula
+string Empresa::simplificadorMatricula(string matricula)
 {
     string novaMatricula = "";
     for (int i = 0; i < matricula.length(); i++)
@@ -42,7 +42,6 @@ string simplificadorMatricula(string matricula) // Função para tirar ponto e -
     }
     return novaMatricula;
 }
-
 void Empresa::carregarFuncoes()
 {
     fstream arq;

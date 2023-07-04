@@ -1,3 +1,11 @@
+/**
+ * @author Maria Clara Fernandes de Oliveira
+ * @author Pedro Rian Araújo da Silva
+ * @details Repositório dedicado ao desenvolvimento de um sistema de RH para a empresa Atacado dos Calçados;
+Projeto final da disciplina de Linguagem de Programação 1.
+ * @date 2023-06-23
+ */
+
 #include <iostream>
 #include "Empresa/Empresa.hpp"
 #include "Util.hpp"

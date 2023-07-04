@@ -1,0 +1,222 @@
+\hypertarget{classEmpresa}{}\doxysection{Empresa Class Reference}
+\label{classEmpresa}\index{Empresa@{Empresa}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEmpresa_aff124b958356c479ab50ddf4cf302193}\label{classEmpresa_aff124b958356c479ab50ddf4cf302193}} 
+\mbox{\hyperlink{classEmpresa_aff124b958356c479ab50ddf4cf302193}{Empresa}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio de empresa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEmpresa_aebb4cab3db85e51b12403071c456edd8}{Empresa}} (std\+::string nome\+Empresa, std\+::string cnpj, float faturamento\+Mensal)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado de empresa. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classEmpresa_a3f289a653ffd91fd43a96b5dec22887e}{simplificador\+Matricula}} (string matricula)
+\begin{DoxyCompactList}\small\item\em Função para remover \char`\"{}.\char`\"{} e \char`\"{}-\/\char`\"{} da matricula. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classEmpresa_a61dd1b1f6921650ab6c35bb229df35ce}{get\+Faturamento\+Mensal}} ()
+\begin{DoxyCompactList}\small\item\em Getter do faturamento mensal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmpresa_a7c16027217f4b4dc85141520a75dc455}{set\+Faturamento\+Mensal}} (float faturamento)
+\begin{DoxyCompactList}\small\item\em Setter de faturamento mensal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a6df20cc09c6ba2edce538b1964d6de2c}\label{classEmpresa_a6df20cc09c6ba2edce538b1964d6de2c}} 
+std\+::string {\bfseries get\+Nome\+Empresa} ()
+\item 
+\mbox{\Hypertarget{classEmpresa_a874ab1ae3d6b192c9100a75d62d35344}\label{classEmpresa_a874ab1ae3d6b192c9100a75d62d35344}} 
+void {\bfseries set\+Nome\+Empresa} (std\+::string nome\+Empresa)
+\item 
+\mbox{\Hypertarget{classEmpresa_a30869e33491e4b4fbe66a159920a51f1}\label{classEmpresa_a30869e33491e4b4fbe66a159920a51f1}} 
+std\+::string {\bfseries get\+Cnpj} ()
+\item 
+\mbox{\Hypertarget{classEmpresa_a349a57928e66ea0bca73fab2eeff7162}\label{classEmpresa_a349a57928e66ea0bca73fab2eeff7162}} 
+void {\bfseries set\+Cnpj} (std\+::string cnpj)
+\item 
+\mbox{\Hypertarget{classEmpresa_a344c4e8b6eab9cc5174823071fafeae0}\label{classEmpresa_a344c4e8b6eab9cc5174823071fafeae0}} 
+\mbox{\hyperlink{classPessoa}{Pessoa}} {\bfseries get\+Dono} ()
+\item 
+\mbox{\Hypertarget{classEmpresa_a096c603e4dc6331e3e641fb2751030b4}\label{classEmpresa_a096c603e4dc6331e3e641fb2751030b4}} 
+std\+::vector$<$ \mbox{\hyperlink{classAsg}{Asg}} $>$ {\bfseries get\+Asgs} ()
+\item 
+\mbox{\Hypertarget{classEmpresa_af07fe8d0751d41cdff8af02f30ddfe45}\label{classEmpresa_af07fe8d0751d41cdff8af02f30ddfe45}} 
+std\+::vector$<$ \mbox{\hyperlink{classVendedor}{Vendedor}} $>$ {\bfseries get\+Vendedores} ()
+\item 
+\mbox{\Hypertarget{classEmpresa_a7c04689e34e18f6e85fb8c647478e7db}\label{classEmpresa_a7c04689e34e18f6e85fb8c647478e7db}} 
+std\+::vector$<$ \mbox{\hyperlink{classGerente}{Gerente}} $>$ {\bfseries get\+Gerentes} ()
+\item 
+\mbox{\Hypertarget{classEmpresa_a1b256d00c404cbbb15b8e4319c7c8733}\label{classEmpresa_a1b256d00c404cbbb15b8e4319c7c8733}} 
+void \mbox{\hyperlink{classEmpresa_a1b256d00c404cbbb15b8e4319c7c8733}{carregar\+Funcoes}} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega funções do arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a63bd64b027dc2f174881fadd84f96c35}\label{classEmpresa_a63bd64b027dc2f174881fadd84f96c35}} 
+void \mbox{\hyperlink{classEmpresa_a63bd64b027dc2f174881fadd84f96c35}{carregar\+Empresa}} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega empresa a partir do arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a556049e703ccce45896f11b86beacce1}\label{classEmpresa_a556049e703ccce45896f11b86beacce1}} 
+void \mbox{\hyperlink{classEmpresa_a556049e703ccce45896f11b86beacce1}{carregar\+Asg}} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega A\+SG a partir do arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a7e8ea2a13388db9540d4481096e209bb}\label{classEmpresa_a7e8ea2a13388db9540d4481096e209bb}} 
+void \mbox{\hyperlink{classEmpresa_a7e8ea2a13388db9540d4481096e209bb}{carregar\+Vendedor}} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega vendedor a partir do arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a5ecb4393e55ef115ecc145c323623fb8}\label{classEmpresa_a5ecb4393e55ef115ecc145c323623fb8}} 
+void \mbox{\hyperlink{classEmpresa_a5ecb4393e55ef115ecc145c323623fb8}{carregar\+Gerente}} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega gerente a partir do arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a8dac5159c736a804e0d81ff225d622d6}\label{classEmpresa_a8dac5159c736a804e0d81ff225d622d6}} 
+void \mbox{\hyperlink{classEmpresa_a8dac5159c736a804e0d81ff225d622d6}{carregar\+Dono}} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega o dono a partir do arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a6c39118cf65503efbcd148756c1ebcae}\label{classEmpresa_a6c39118cf65503efbcd148756c1ebcae}} 
+void \mbox{\hyperlink{classEmpresa_a6c39118cf65503efbcd148756c1ebcae}{imprime\+Asgs}} ()
+\begin{DoxyCompactList}\small\item\em Função que imprime os A\+SG. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_ac3ea726782334674cb0943fa20510840}\label{classEmpresa_ac3ea726782334674cb0943fa20510840}} 
+void \mbox{\hyperlink{classEmpresa_ac3ea726782334674cb0943fa20510840}{imprime\+Vendendores}} ()
+\begin{DoxyCompactList}\small\item\em Função que imprime os vendedores. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a570d087a3f6c093817ad23fe9c991362}\label{classEmpresa_a570d087a3f6c093817ad23fe9c991362}} 
+void \mbox{\hyperlink{classEmpresa_a570d087a3f6c093817ad23fe9c991362}{imprime\+Gerentes}} ()
+\begin{DoxyCompactList}\small\item\em Função que imprime os gerentes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_ad548118032b58a99b36c494ed1e61775}\label{classEmpresa_ad548118032b58a99b36c494ed1e61775}} 
+void \mbox{\hyperlink{classEmpresa_ad548118032b58a99b36c494ed1e61775}{imprime\+Dono}} ()
+\begin{DoxyCompactList}\small\item\em Função que imprime o dono. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmpresa_ad2cd9b0e17e44ef6aed32dedc47719fa}{busca\+Funcionario}} (int matricula)
+\begin{DoxyCompactList}\small\item\em Função que busca o funcionario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmpresa_a108b84488c0203cf06c650a37312f3af}{cacular\+Salario\+Funcionario}} (int matricula)
+\begin{DoxyCompactList}\small\item\em Função que calcula o salario do funcionario. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a759d86c2c12e9e66ad8c26c1142ff1da}\label{classEmpresa_a759d86c2c12e9e66ad8c26c1142ff1da}} 
+void \mbox{\hyperlink{classEmpresa_a759d86c2c12e9e66ad8c26c1142ff1da}{calcular\+Todo\+Os\+Salarios}} ()
+\begin{DoxyCompactList}\small\item\em Função que calcula o salario de todos os funcionarios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmpresa_aa79def576740be023fc2e371cd068bca}{calcular\+Recisao}} (int matricula, \mbox{\hyperlink{structData}{Data}} desligamento)
+\begin{DoxyCompactList}\small\item\em Função que calcula a recisão do funcionario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmpresa_a03537c57b719b4fe6c3bec08f3e3cb4b}{demitir\+Funcionario}} (int matricula, \mbox{\hyperlink{structData}{Data}} desligamento)
+\begin{DoxyCompactList}\small\item\em Função para demitir um funcionario. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEmpresa_a12bf2e81455535cca9ae407f883a2d89}\label{classEmpresa_a12bf2e81455535cca9ae407f883a2d89}} 
+void \mbox{\hyperlink{classEmpresa_a12bf2e81455535cca9ae407f883a2d89}{contratar\+Funcionario}} ()
+\begin{DoxyCompactList}\small\item\em Função para contratar um novo funcionario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEmpresa_aebb4cab3db85e51b12403071c456edd8}\label{classEmpresa_aebb4cab3db85e51b12403071c456edd8}} 
+\index{Empresa@{Empresa}!Empresa@{Empresa}}
+\index{Empresa@{Empresa}!Empresa@{Empresa}}
+\doxysubsubsection{\texorpdfstring{Empresa()}{Empresa()}}
+{\footnotesize\ttfamily Empresa\+::\+Empresa (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Empresa,  }\item[{std\+::string}]{cnpj,  }\item[{float}]{faturamento\+Mensal }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado de empresa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Empresa} & nome da empresa \\
+\hline
+{\em cnpj} & cnpj da empresa \\
+\hline
+{\em faturamento\+Mensal} & Faturamento mensal da empresa \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEmpresa_ad2cd9b0e17e44ef6aed32dedc47719fa}\label{classEmpresa_ad2cd9b0e17e44ef6aed32dedc47719fa}} 
+\index{Empresa@{Empresa}!buscaFuncionario@{buscaFuncionario}}
+\index{buscaFuncionario@{buscaFuncionario}!Empresa@{Empresa}}
+\doxysubsubsection{\texorpdfstring{buscaFuncionario()}{buscaFuncionario()}}
+{\footnotesize\ttfamily void Empresa\+::busca\+Funcionario (\begin{DoxyParamCaption}\item[{int}]{matricula }\end{DoxyParamCaption})}
+
+
+
+Função que busca o funcionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matricula} & A matricula do funcionario \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEmpresa_a108b84488c0203cf06c650a37312f3af}\label{classEmpresa_a108b84488c0203cf06c650a37312f3af}} 
+\index{Empresa@{Empresa}!cacularSalarioFuncionario@{cacularSalarioFuncionario}}
+\index{cacularSalarioFuncionario@{cacularSalarioFuncionario}!Empresa@{Empresa}}
+\doxysubsubsection{\texorpdfstring{cacularSalarioFuncionario()}{cacularSalarioFuncionario()}}
+{\footnotesize\ttfamily void Empresa\+::cacular\+Salario\+Funcionario (\begin{DoxyParamCaption}\item[{int}]{matricula }\end{DoxyParamCaption})}
+
+
+
+Função que calcula o salario do funcionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matricula} & A matricula do funcionario \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEmpresa_aa79def576740be023fc2e371cd068bca}\label{classEmpresa_aa79def576740be023fc2e371cd068bca}} 
+\index{Empresa@{Empresa}!calcularRecisao@{calcularRecisao}}
+\index{calcularRecisao@{calcularRecisao}!Empresa@{Empresa}}
+\doxysubsubsection{\texorpdfstring{calcularRecisao()}{calcularRecisao()}}
+{\footnotesize\ttfamily void Empresa\+::calcular\+Recisao (\begin{DoxyParamCaption}\item[{int}]{matricula,  }\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})}
+
+
+
+Função que calcula a recisão do funcionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matricula} & A matricula do funcionario \\
+\hline
+{\em desligamento} & A data de desligamento do funcionario \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEmpresa_a03537c57b719b4fe6c3bec08f3e3cb4b}\label{classEmpresa_a03537c57b719b4fe6c3bec08f3e3cb4b}} 
+\index{Empresa@{Empresa}!demitirFuncionario@{demitirFuncionario}}
+\index{demitirFuncionario@{demitirFuncionario}!Empresa@{Empresa}}
+\doxysubsubsection{\texorpdfstring{demitirFuncionario()}{demitirFuncionario()}}
+{\footnotesize\ttfamily void Empresa\+::demitir\+Funcionario (\begin{DoxyParamCaption}\item[{int}]{matricula,  }\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})}
+
+
+
+Função para demitir um funcionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matricula} & A matricula do funcionario \\
+\hline
+{\em desligamento} & A data de desligamento do funcionario \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEmpresa_a61dd1b1f6921650ab6c35bb229df35ce}\label{classEmpresa_a61dd1b1f6921650ab6c35bb229df35ce}} 
+\index{Empresa@{Empresa}!getFaturamentoMensal@{getFaturamentoMensal}}
+\index{getFaturamentoMensal@{getFaturamentoMensal}!Empresa@{Empresa}}
+\doxysubsubsection{\texorpdfstring{getFaturamentoMensal()}{getFaturamentoMensal()}}
+{\footnotesize\ttfamily float Empresa\+::get\+Faturamento\+Mensal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter do faturamento mensal. 
+
+\begin{DoxyReturn}{Returns}
+Faturamento mensal da empresa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEmpresa_a7c16027217f4b4dc85141520a75dc455}\label{classEmpresa_a7c16027217f4b4dc85141520a75dc455}} 
+\index{Empresa@{Empresa}!setFaturamentoMensal@{setFaturamentoMensal}}
+\index{setFaturamentoMensal@{setFaturamentoMensal}!Empresa@{Empresa}}
+\doxysubsubsection{\texorpdfstring{setFaturamentoMensal()}{setFaturamentoMensal()}}
+{\footnotesize\ttfamily void Empresa\+::set\+Faturamento\+Mensal (\begin{DoxyParamCaption}\item[{float}]{faturamento }\end{DoxyParamCaption})}
+
+
+
+Setter de faturamento mensal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em faturamento} & O faturamento mensal da empresa \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEmpresa_a3f289a653ffd91fd43a96b5dec22887e}\label{classEmpresa_a3f289a653ffd91fd43a96b5dec22887e}} 
+\index{Empresa@{Empresa}!simplificadorMatricula@{simplificadorMatricula}}
+\index{simplificadorMatricula@{simplificadorMatricula}!Empresa@{Empresa}}
+\doxysubsubsection{\texorpdfstring{simplificadorMatricula()}{simplificadorMatricula()}}
+{\footnotesize\ttfamily string Empresa\+::simplificador\+Matricula (\begin{DoxyParamCaption}\item[{string}]{matricula }\end{DoxyParamCaption})}
+
+
+
+Função para remover \char`\"{}.\char`\"{} e \char`\"{}-\/\char`\"{} da matricula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matricula} & A matricula do funcionario \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Empresa/Empresa.\+hpp\item 
+Empresa/Empresa.\+cpp\end{DoxyCompactItemize}
