@@ -11,21 +11,148 @@ Collaboration diagram for Asg\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classAsg_a09b1b8572f9fcdea00f973e10b7d8202}\label{classAsg_a09b1b8572f9fcdea00f973e10b7d8202}} 
+\mbox{\hyperlink{classAsg_a09b1b8572f9fcdea00f973e10b7d8202}{Asg}} ()
+\begin{DoxyCompactList}\small\item\em construtor vazio de A\+SG \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAsg_a49ba0c0685f6e04b22e544053b0f56c9}{Asg}} (std\+::string nome, std\+::string cpf, std\+::string estado\+Civil, int diaN, int mesN, int anoN, std\+::string cidade, std\+::string bairro, std\+::string rua, std\+::string cep, int numero, int quant\+Filhos, float adicional\+Insalubridade, std\+::string salario, std\+::string matricula, int dia, int mes, int ano, int quant\+Faltas)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado de A\+SG. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classAsg_a15d147b41efbd17a89cbe5e4bd25992a}{get\+Adicional\+Insalubridade}} ()
+\begin{DoxyCompactList}\small\item\em Getter do adicional de insalubridade do asg. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAsg_a0ff6a073f7043ad657a05521192414ee}{set\+Adicional\+Insalubridade}} (float adicional\+Insalubridade)
+\begin{DoxyCompactList}\small\item\em Setter do adicional de insalubridade. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classAsg_a1c6b8383f778084c6233d9d14b7e07e9}{calcular\+Salario}} (int dias\+Faltas) override
+\begin{DoxyCompactList}\small\item\em calculo de salario do asg \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classAsg_a987e3e2f95f35e329572ba66dcc5c97f}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento) override
+\begin{DoxyCompactList}\small\item\em calculo da recisão do asg \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classAsg_a49ba0c0685f6e04b22e544053b0f56c9}\label{classAsg_a49ba0c0685f6e04b22e544053b0f56c9}} 
-{\bfseries Asg} (std\+::string nome, std\+::string cpf, std\+::string estado\+Civil, int diaN, int mesN, int anoN, std\+::string cidade, std\+::string bairro, std\+::string rua, std\+::string cep, int numero, int quant\+Filhos, float adicional\+Insalubridade, std\+::string salario, std\+::string matricula, int dia, int mes, int ano, int quant\+Faltas)
-\item 
-\mbox{\Hypertarget{classAsg_a15d147b41efbd17a89cbe5e4bd25992a}\label{classAsg_a15d147b41efbd17a89cbe5e4bd25992a}} 
-float {\bfseries get\+Adicional\+Insalubridade} ()
-\item 
-\mbox{\Hypertarget{classAsg_a0ff6a073f7043ad657a05521192414ee}\label{classAsg_a0ff6a073f7043ad657a05521192414ee}} 
-void {\bfseries set\+Adicional\+Insalubridade} (float adicional\+Insalubridade)
-\item 
-\mbox{\Hypertarget{classAsg_a1c6b8383f778084c6233d9d14b7e07e9}\label{classAsg_a1c6b8383f778084c6233d9d14b7e07e9}} 
-float {\bfseries calcular\+Salario} (int dias\+Faltas) override
-\item 
+\index{Asg@{Asg}!Asg@{Asg}}
+\index{Asg@{Asg}!Asg@{Asg}}
+\doxysubsubsection{\texorpdfstring{Asg()}{Asg()}}
+{\footnotesize\ttfamily Asg\+::\+Asg (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{std\+::string}]{estado\+Civil,  }\item[{int}]{diaN,  }\item[{int}]{mesN,  }\item[{int}]{anoN,  }\item[{std\+::string}]{cidade,  }\item[{std\+::string}]{bairro,  }\item[{std\+::string}]{rua,  }\item[{std\+::string}]{cep,  }\item[{int}]{numero,  }\item[{int}]{quant\+Filhos,  }\item[{float}]{adicional\+Insalubridade,  }\item[{std\+::string}]{salario,  }\item[{std\+::string}]{matricula,  }\item[{int}]{dia,  }\item[{int}]{mes,  }\item[{int}]{ano,  }\item[{int}]{quant\+Faltas }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado de A\+SG. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & O nome do asg \\
+\hline
+{\em cpf} & O cpf do asg. \\
+\hline
+{\em dia} & O dia de nascimento \\
+\hline
+{\em mes} & O mês de nascimento \\
+\hline
+{\em ano} & O ano de nascimento \\
+\hline
+{\em estado\+Civil} & O estado civil do asg \\
+\hline
+{\em cidade} & A cidade do asg \\
+\hline
+{\em bairro} & O bairro do asg \\
+\hline
+{\em rua} & A rua do asg \\
+\hline
+{\em cep} & O cep do asg \\
+\hline
+{\em numero} & O numero da casa do asg \\
+\hline
+{\em quant\+Filhos} & A quantidade de filhos do asg \\
+\hline
+{\em adicional\+Insalubridade} & o adicional de insalubridade do asg \\
+\hline
+{\em salario} & O salario do asg \\
+\hline
+{\em matricula} & a matricula do asg \\
+\hline
+{\em dia} & dia de ingresso do asg \\
+\hline
+{\em mes} & mes de ingresso do asg \\
+\hline
+{\em ano} & ano de ingresso do asg \\
+\hline
+{\em quant\+Faltas} & quantidade de faltas do asg \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classAsg_a987e3e2f95f35e329572ba66dcc5c97f}\label{classAsg_a987e3e2f95f35e329572ba66dcc5c97f}} 
-float {\bfseries calcular\+Recisao} (\mbox{\hyperlink{structData}{Data}} desligamento) override
-\end{DoxyCompactItemize}
+\index{Asg@{Asg}!calcularRecisao@{calcularRecisao}}
+\index{calcularRecisao@{calcularRecisao}!Asg@{Asg}}
+\doxysubsubsection{\texorpdfstring{calcularRecisao()}{calcularRecisao()}}
+{\footnotesize\ttfamily float Asg\+::calcular\+Recisao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+calculo da recisão do asg 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desligamento} & data de desligamento do asg \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor da recisão do asg 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFuncionario_a1aa96ac8c4f6c5e9af559d9b94d37b46}{Funcionario}}.
+
+\mbox{\Hypertarget{classAsg_a1c6b8383f778084c6233d9d14b7e07e9}\label{classAsg_a1c6b8383f778084c6233d9d14b7e07e9}} 
+\index{Asg@{Asg}!calcularSalario@{calcularSalario}}
+\index{calcularSalario@{calcularSalario}!Asg@{Asg}}
+\doxysubsubsection{\texorpdfstring{calcularSalario()}{calcularSalario()}}
+{\footnotesize\ttfamily float Asg\+::calcular\+Salario (\begin{DoxyParamCaption}\item[{int}]{dias\+Faltas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+calculo de salario do asg 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dias\+Faltas} & quantidade de faltas do asg \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor do salario do asg 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}{Funcionario}}.
+
+\mbox{\Hypertarget{classAsg_a15d147b41efbd17a89cbe5e4bd25992a}\label{classAsg_a15d147b41efbd17a89cbe5e4bd25992a}} 
+\index{Asg@{Asg}!getAdicionalInsalubridade@{getAdicionalInsalubridade}}
+\index{getAdicionalInsalubridade@{getAdicionalInsalubridade}!Asg@{Asg}}
+\doxysubsubsection{\texorpdfstring{getAdicionalInsalubridade()}{getAdicionalInsalubridade()}}
+{\footnotesize\ttfamily float Asg\+::get\+Adicional\+Insalubridade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter do adicional de insalubridade do asg. 
+
+\begin{DoxyReturn}{Returns}
+valor do adicional de insalubridade 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAsg_a0ff6a073f7043ad657a05521192414ee}\label{classAsg_a0ff6a073f7043ad657a05521192414ee}} 
+\index{Asg@{Asg}!setAdicionalInsalubridade@{setAdicionalInsalubridade}}
+\index{setAdicionalInsalubridade@{setAdicionalInsalubridade}!Asg@{Asg}}
+\doxysubsubsection{\texorpdfstring{setAdicionalInsalubridade()}{setAdicionalInsalubridade()}}
+{\footnotesize\ttfamily void Asg\+::set\+Adicional\+Insalubridade (\begin{DoxyParamCaption}\item[{float}]{adicional\+Insalubridade }\end{DoxyParamCaption})}
+
+
+
+Setter do adicional de insalubridade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adicional\+Insalubridade} & adicional de insalubridade do asg \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

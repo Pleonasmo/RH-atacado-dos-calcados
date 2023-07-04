@@ -7,36 +7,189 @@ Inheritance diagram for Funcionario\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}\label{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}} 
-virtual float {\bfseries calcular\+Salario} (int dias\+Faltas)=0
-\item 
+virtual float \mbox{\hyperlink{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}{calcular\+Salario}} (int dias\+Faltas)=0
+\begin{DoxyCompactList}\small\item\em função para calcular salario do funcionario \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classFuncionario_a1aa96ac8c4f6c5e9af559d9b94d37b46}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento)=0
+\begin{DoxyCompactList}\small\item\em função para calcular recisão do funcionario \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFuncionario_a498456a7d18cc96d938ac7d995c9e59e}{get\+Salario}} ()
+\begin{DoxyCompactList}\small\item\em Getter de salario do funcionario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_a338524a3b30a1b1c63699d176221aa67}{set\+Salario}} (std\+::string salario)
+\begin{DoxyCompactList}\small\item\em Setter de salario. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFuncionario_a1912eb4022aab6c318c8d1cbb42c5192}{get\+Matricula}} ()
+\begin{DoxyCompactList}\small\item\em Getter de matricula. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{set\+Matricula}} (std\+::string matricula)
+\begin{DoxyCompactList}\small\item\em Setter de matricula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{classFuncionario_a60b17ab39198bd46522c61f0f6701359}{get\+Ingresso\+Empresa}} ()
+\begin{DoxyCompactList}\small\item\em Getter de data de ingresso na empresa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_a41a2d62131629ff0cfd29aeeaf70f25d}{set\+Ingresso\+Empresa}} (int dia, int mes, int ano)
+\begin{DoxyCompactList}\small\item\em Setter de data de ingresso na empresa. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFuncionario_a352799f5a8968e997b32c4c3a88ec1c9}{get\+Quant\+Faltas}} ()
+\begin{DoxyCompactList}\small\item\em Getter de quantidade de faltas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_a58264a6e199488d49b21fe6323891434}{set\+Quant\+Faltas}} (int quant\+Faltas)
+\begin{DoxyCompactList}\small\item\em Setter de quantidade de faltas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classFuncionario_a1aa96ac8c4f6c5e9af559d9b94d37b46}\label{classFuncionario_a1aa96ac8c4f6c5e9af559d9b94d37b46}} 
-virtual float {\bfseries calcular\+Recisao} (\mbox{\hyperlink{structData}{Data}} desligamento)=0
-\item 
-\mbox{\Hypertarget{classFuncionario_a498456a7d18cc96d938ac7d995c9e59e}\label{classFuncionario_a498456a7d18cc96d938ac7d995c9e59e}} 
-std\+::string {\bfseries get\+Salario} ()
-\item 
-\mbox{\Hypertarget{classFuncionario_a338524a3b30a1b1c63699d176221aa67}\label{classFuncionario_a338524a3b30a1b1c63699d176221aa67}} 
-void {\bfseries set\+Salario} (std\+::string salario)
-\item 
-\mbox{\Hypertarget{classFuncionario_a1912eb4022aab6c318c8d1cbb42c5192}\label{classFuncionario_a1912eb4022aab6c318c8d1cbb42c5192}} 
-std\+::string {\bfseries get\+Matricula} ()
-\item 
-\mbox{\Hypertarget{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}\label{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}} 
-void {\bfseries set\+Matricula} (std\+::string matricula)
-\item 
+\index{Funcionario@{Funcionario}!calcularRecisao@{calcularRecisao}}
+\index{calcularRecisao@{calcularRecisao}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{calcularRecisao()}{calcularRecisao()}}
+{\footnotesize\ttfamily virtual float Funcionario\+::calcular\+Recisao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+função para calcular recisão do funcionario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desligamento} & data de desligamento do funcionario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor da recisao do funcionario 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAsg_a987e3e2f95f35e329572ba66dcc5c97f}{Asg}}, \mbox{\hyperlink{classVendedor_aeefa062fed5d9ff0bed132c2f540f991}{Vendedor}}, and \mbox{\hyperlink{classGerente_a1588b8af7307d4ad323068f679684aa0}{Gerente}}.
+
+\mbox{\Hypertarget{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}\label{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}} 
+\index{Funcionario@{Funcionario}!calcularSalario@{calcularSalario}}
+\index{calcularSalario@{calcularSalario}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{calcularSalario()}{calcularSalario()}}
+{\footnotesize\ttfamily virtual float Funcionario\+::calcular\+Salario (\begin{DoxyParamCaption}\item[{int}]{dias\+Faltas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+função para calcular salario do funcionario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dias\+Faltas} & quantidade de faltas do funcionario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor do salario do funciuonario 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAsg_a1c6b8383f778084c6233d9d14b7e07e9}{Asg}}, \mbox{\hyperlink{classVendedor_a746aa6a5957296defe5cd3aff85bbcc1}{Vendedor}}, and \mbox{\hyperlink{classGerente_aa6f74816d527b4074361bb8e405a702e}{Gerente}}.
+
 \mbox{\Hypertarget{classFuncionario_a60b17ab39198bd46522c61f0f6701359}\label{classFuncionario_a60b17ab39198bd46522c61f0f6701359}} 
-\mbox{\hyperlink{structData}{Data}} {\bfseries get\+Ingresso\+Empresa} ()
-\item 
-\mbox{\Hypertarget{classFuncionario_a41a2d62131629ff0cfd29aeeaf70f25d}\label{classFuncionario_a41a2d62131629ff0cfd29aeeaf70f25d}} 
-void {\bfseries set\+Ingresso\+Empresa} (int dia, int mes, int ano)
-\item 
+\index{Funcionario@{Funcionario}!getIngressoEmpresa@{getIngressoEmpresa}}
+\index{getIngressoEmpresa@{getIngressoEmpresa}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{getIngressoEmpresa()}{getIngressoEmpresa()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} Funcionario\+::get\+Ingresso\+Empresa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de data de ingresso na empresa. 
+
+\begin{DoxyReturn}{Returns}
+data de ingresso na empresa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a1912eb4022aab6c318c8d1cbb42c5192}\label{classFuncionario_a1912eb4022aab6c318c8d1cbb42c5192}} 
+\index{Funcionario@{Funcionario}!getMatricula@{getMatricula}}
+\index{getMatricula@{getMatricula}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{getMatricula()}{getMatricula()}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::get\+Matricula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de matricula. 
+
+\begin{DoxyReturn}{Returns}
+matricula do funcionario 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classFuncionario_a352799f5a8968e997b32c4c3a88ec1c9}\label{classFuncionario_a352799f5a8968e997b32c4c3a88ec1c9}} 
-int {\bfseries get\+Quant\+Faltas} ()
-\item 
+\index{Funcionario@{Funcionario}!getQuantFaltas@{getQuantFaltas}}
+\index{getQuantFaltas@{getQuantFaltas}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{getQuantFaltas()}{getQuantFaltas()}}
+{\footnotesize\ttfamily int Funcionario\+::get\+Quant\+Faltas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de quantidade de faltas. 
+
+\begin{DoxyReturn}{Returns}
+quantidade de faltas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a498456a7d18cc96d938ac7d995c9e59e}\label{classFuncionario_a498456a7d18cc96d938ac7d995c9e59e}} 
+\index{Funcionario@{Funcionario}!getSalario@{getSalario}}
+\index{getSalario@{getSalario}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{getSalario()}{getSalario()}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::get\+Salario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de salario do funcionario. 
+
+\begin{DoxyReturn}{Returns}
+salario do funcionario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a41a2d62131629ff0cfd29aeeaf70f25d}\label{classFuncionario_a41a2d62131629ff0cfd29aeeaf70f25d}} 
+\index{Funcionario@{Funcionario}!setIngressoEmpresa@{setIngressoEmpresa}}
+\index{setIngressoEmpresa@{setIngressoEmpresa}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{setIngressoEmpresa()}{setIngressoEmpresa()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Ingresso\+Empresa (\begin{DoxyParamCaption}\item[{int}]{dia,  }\item[{int}]{mes,  }\item[{int}]{ano }\end{DoxyParamCaption})}
+
+
+
+Setter de data de ingresso na empresa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dia} & dia de ingresso \\
+\hline
+{\em mes} & mes de ingresso \\
+\hline
+{\em ano} & ano de ingresso \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}\label{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}} 
+\index{Funcionario@{Funcionario}!setMatricula@{setMatricula}}
+\index{setMatricula@{setMatricula}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{setMatricula()}{setMatricula()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Matricula (\begin{DoxyParamCaption}\item[{std\+::string}]{matricula }\end{DoxyParamCaption})}
+
+
+
+Setter de matricula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matricula} & matricula do funcionario \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classFuncionario_a58264a6e199488d49b21fe6323891434}\label{classFuncionario_a58264a6e199488d49b21fe6323891434}} 
-void {\bfseries set\+Quant\+Faltas} (int quant\+Faltas)
-\end{DoxyCompactItemize}
+\index{Funcionario@{Funcionario}!setQuantFaltas@{setQuantFaltas}}
+\index{setQuantFaltas@{setQuantFaltas}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{setQuantFaltas()}{setQuantFaltas()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Quant\+Faltas (\begin{DoxyParamCaption}\item[{int}]{quant\+Faltas }\end{DoxyParamCaption})}
+
+
+
+Setter de quantidade de faltas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quant\+Faltas} & quantidade de faltas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_a338524a3b30a1b1c63699d176221aa67}\label{classFuncionario_a338524a3b30a1b1c63699d176221aa67}} 
+\index{Funcionario@{Funcionario}!setSalario@{setSalario}}
+\index{setSalario@{setSalario}!Funcionario@{Funcionario}}
+\doxysubsubsection{\texorpdfstring{setSalario()}{setSalario()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Salario (\begin{DoxyParamCaption}\item[{std\+::string}]{salario }\end{DoxyParamCaption})}
+
+
+
+Setter de salario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em salario} & salario do funcionario \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

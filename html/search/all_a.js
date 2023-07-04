@@ -1,11 +1,20 @@
 var searchData=
 [
-  ['setcpf_31',['setCpf',['../classPessoa.html#a63d922c3aaf98fef19aeaf4353b0c718',1,'Pessoa']]],
-  ['setdatanascimento_32',['setDataNascimento',['../classPessoa.html#a3a38b448ed109201ad06bd356c20f91c',1,'Pessoa']]],
-  ['setenderecopessoal_33',['setEnderecoPessoal',['../classPessoa.html#a09d10f422f5d280c4fb6bdff9ef2677e',1,'Pessoa']]],
-  ['setestadocivil_34',['setEstadoCivil',['../classPessoa.html#a3d4c3e2b7177be168d556e698f401b65',1,'Pessoa']]],
-  ['setfaturamentomensal_35',['setFaturamentoMensal',['../classEmpresa.html#a7c16027217f4b4dc85141520a75dc455',1,'Empresa']]],
-  ['setnome_36',['setNome',['../classPessoa.html#a26074576a426b510ff59165b05031f57',1,'Pessoa']]],
-  ['setquantfilhos_37',['setQuantFilhos',['../classPessoa.html#a478e93ce11b8f5a4c5682202f2fd81c8',1,'Pessoa']]],
-  ['simplificadormatricula_38',['simplificadorMatricula',['../classEmpresa.html#a3f289a653ffd91fd43a96b5dec22887e',1,'Empresa']]]
+  ['setadicionalinsalubridade_45',['setAdicionalInsalubridade',['../classAsg.html#a0ff6a073f7043ad657a05521192414ee',1,'Asg']]],
+  ['setcnpj_46',['setCnpj',['../classEmpresa.html#a349a57928e66ea0bca73fab2eeff7162',1,'Empresa']]],
+  ['setcpf_47',['setCpf',['../classPessoa.html#a63d922c3aaf98fef19aeaf4353b0c718',1,'Pessoa']]],
+  ['setdatanascimento_48',['setDataNascimento',['../classPessoa.html#a3a38b448ed109201ad06bd356c20f91c',1,'Pessoa']]],
+  ['setenderecopessoal_49',['setEnderecoPessoal',['../classPessoa.html#a09d10f422f5d280c4fb6bdff9ef2677e',1,'Pessoa']]],
+  ['setestadocivil_50',['setEstadoCivil',['../classPessoa.html#a3d4c3e2b7177be168d556e698f401b65',1,'Pessoa']]],
+  ['setfaturamentomensal_51',['setFaturamentoMensal',['../classEmpresa.html#a7c16027217f4b4dc85141520a75dc455',1,'Empresa']]],
+  ['setingressoempresa_52',['setIngressoEmpresa',['../classFuncionario.html#a41a2d62131629ff0cfd29aeeaf70f25d',1,'Funcionario']]],
+  ['setmatricula_53',['setMatricula',['../classFuncionario.html#ac9ddaedaa41e63ddd1a30f68c992bdfb',1,'Funcionario']]],
+  ['setnome_54',['setNome',['../classPessoa.html#a26074576a426b510ff59165b05031f57',1,'Pessoa']]],
+  ['setnomeempresa_55',['setNomeEmpresa',['../classEmpresa.html#a874ab1ae3d6b192c9100a75d62d35344',1,'Empresa']]],
+  ['setparticipacaolucros_56',['setParticipacaoLucros',['../classGerente.html#aa0cdd8949bbc2a3208cb0cedc38e3af4',1,'Gerente']]],
+  ['setquantfaltas_57',['setQuantFaltas',['../classFuncionario.html#a58264a6e199488d49b21fe6323891434',1,'Funcionario']]],
+  ['setquantfilhos_58',['setQuantFilhos',['../classPessoa.html#a478e93ce11b8f5a4c5682202f2fd81c8',1,'Pessoa']]],
+  ['setsalario_59',['setSalario',['../classFuncionario.html#a338524a3b30a1b1c63699d176221aa67',1,'Funcionario']]],
+  ['settipovendedor_60',['setTipoVendedor',['../classVendedor.html#a7dbf14984f22245f787b3461d55006a8',1,'Vendedor']]],
+  ['simplificadormatricula_61',['simplificadorMatricula',['../classEmpresa.html#a3f289a653ffd91fd43a96b5dec22887e',1,'Empresa']]]
 ];

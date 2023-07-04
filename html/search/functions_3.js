@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['empresa_60',['Empresa',['../classEmpresa.html#aff124b958356c479ab50ddf4cf302193',1,'Empresa::Empresa()'],['../classEmpresa.html#aebb4cab3db85e51b12403071c456edd8',1,'Empresa::Empresa(std::string nomeEmpresa, std::string cnpj, float faturamentoMensal)']]]
+  ['demitirfuncionario_84',['demitirFuncionario',['../classEmpresa.html#a03537c57b719b4fe6c3bec08f3e3cb4b',1,'Empresa']]]
 ];

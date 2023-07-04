@@ -11,21 +11,148 @@ Collaboration diagram for Gerente\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classGerente_a02847f6297c4571cd954005d5dace25b}\label{classGerente_a02847f6297c4571cd954005d5dace25b}} 
+\mbox{\hyperlink{classGerente_a02847f6297c4571cd954005d5dace25b}{Gerente}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio de \mbox{\hyperlink{classGerente}{Gerente}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGerente_a4cd8d600aa7d7ff229a4a10a2c0346b6}{Gerente}} (std\+::string nome, std\+::string cpf, std\+::string estado\+Civil, int diaN, int mesN, int anoN, std\+::string cidade, std\+::string bairro, std\+::string rua, std\+::string cep, int numero, int quant\+Filhos, std\+::string salario, std\+::string matricula, int dia, int mes, int ano, float participacao\+Lucros, int quant\+Faltas)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado de \mbox{\hyperlink{classGerente}{Gerente}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGerente_a63ce63a22723ff9083dd172302b23367}{get\+Participacao\+Lucros}} ()
+\begin{DoxyCompactList}\small\item\em Getter da participacao nos lucros. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}{set\+Participacao\+Lucros}} (float participacao\+Lucros)
+\begin{DoxyCompactList}\small\item\em Setter da participacao nos lucros. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGerente_aa6f74816d527b4074361bb8e405a702e}{calcular\+Salario}} (int dias\+Faltas) override
+\begin{DoxyCompactList}\small\item\em calculo do salario do \mbox{\hyperlink{classGerente}{Gerente}} \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGerente_a1588b8af7307d4ad323068f679684aa0}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento) override
+\begin{DoxyCompactList}\small\item\em calculo da recisao do gerente \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classGerente_a4cd8d600aa7d7ff229a4a10a2c0346b6}\label{classGerente_a4cd8d600aa7d7ff229a4a10a2c0346b6}} 
-{\bfseries Gerente} (std\+::string nome, std\+::string cpf, std\+::string estado\+Civil, int diaN, int mesN, int anoN, std\+::string cidade, std\+::string bairro, std\+::string rua, std\+::string cep, int numero, int quant\+Filhos, std\+::string salario, std\+::string matricula, int dia, int mes, int ano, float participacao\+Lucros, int quant\+Faltas)
-\item 
-\mbox{\Hypertarget{classGerente_a63ce63a22723ff9083dd172302b23367}\label{classGerente_a63ce63a22723ff9083dd172302b23367}} 
-float {\bfseries get\+Participacao\+Lucros} ()
-\item 
-\mbox{\Hypertarget{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}\label{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}} 
-void {\bfseries set\+Participacao\+Lucros} (float participacao\+Lucros)
-\item 
-\mbox{\Hypertarget{classGerente_aa6f74816d527b4074361bb8e405a702e}\label{classGerente_aa6f74816d527b4074361bb8e405a702e}} 
-float {\bfseries calcular\+Salario} (int dias\+Faltas) override
-\item 
+\index{Gerente@{Gerente}!Gerente@{Gerente}}
+\index{Gerente@{Gerente}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{Gerente()}{Gerente()}}
+{\footnotesize\ttfamily Gerente\+::\+Gerente (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{std\+::string}]{estado\+Civil,  }\item[{int}]{diaN,  }\item[{int}]{mesN,  }\item[{int}]{anoN,  }\item[{std\+::string}]{cidade,  }\item[{std\+::string}]{bairro,  }\item[{std\+::string}]{rua,  }\item[{std\+::string}]{cep,  }\item[{int}]{numero,  }\item[{int}]{quant\+Filhos,  }\item[{std\+::string}]{salario,  }\item[{std\+::string}]{matricula,  }\item[{int}]{dia,  }\item[{int}]{mes,  }\item[{int}]{ano,  }\item[{float}]{participacao\+Lucros,  }\item[{int}]{quant\+Faltas }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado de \mbox{\hyperlink{classGerente}{Gerente}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & O nome do \mbox{\hyperlink{classGerente}{Gerente}} \\
+\hline
+{\em cpf} & O cpf do \mbox{\hyperlink{classGerente}{Gerente}}. \\
+\hline
+{\em dia} & O dia de nascimento \\
+\hline
+{\em mes} & O mês de nascimento \\
+\hline
+{\em ano} & O ano de nascimento \\
+\hline
+{\em estado\+Civil} & O estado civil do gerente \\
+\hline
+{\em cidade} & A cidade do gerente \\
+\hline
+{\em bairro} & O bairro do gerente \\
+\hline
+{\em rua} & A rua do gerente \\
+\hline
+{\em cep} & O cep do gerente \\
+\hline
+{\em numero} & O numero da casa do gerente \\
+\hline
+{\em quant\+Filhos} & A quantidade de filhos do gerente \\
+\hline
+{\em participacao\+Lucros} & o percentual de participacao nos lucros do gerente \\
+\hline
+{\em salario} & O salario do gerente \\
+\hline
+{\em matricula} & a matricula do gerente \\
+\hline
+{\em dia} & dia de ingresso do gerente \\
+\hline
+{\em mes} & mes de ingresso do gerente \\
+\hline
+{\em ano} & ano de ingresso do gerente \\
+\hline
+{\em quant\+Faltas} & quantidade de faltas do gerente \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classGerente_a1588b8af7307d4ad323068f679684aa0}\label{classGerente_a1588b8af7307d4ad323068f679684aa0}} 
-float {\bfseries calcular\+Recisao} (\mbox{\hyperlink{structData}{Data}} desligamento) override
-\end{DoxyCompactItemize}
+\index{Gerente@{Gerente}!calcularRecisao@{calcularRecisao}}
+\index{calcularRecisao@{calcularRecisao}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{calcularRecisao()}{calcularRecisao()}}
+{\footnotesize\ttfamily float Gerente\+::calcular\+Recisao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+calculo da recisao do gerente 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desligamento} & data de desligamento do gerente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor da recisao do gerente 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFuncionario_a1aa96ac8c4f6c5e9af559d9b94d37b46}{Funcionario}}.
+
+\mbox{\Hypertarget{classGerente_aa6f74816d527b4074361bb8e405a702e}\label{classGerente_aa6f74816d527b4074361bb8e405a702e}} 
+\index{Gerente@{Gerente}!calcularSalario@{calcularSalario}}
+\index{calcularSalario@{calcularSalario}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{calcularSalario()}{calcularSalario()}}
+{\footnotesize\ttfamily float Gerente\+::calcular\+Salario (\begin{DoxyParamCaption}\item[{int}]{dias\+Faltas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+calculo do salario do \mbox{\hyperlink{classGerente}{Gerente}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dias\+Faltas} & quantidade de faltas do gerente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor do salario do gerente 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}{Funcionario}}.
+
+\mbox{\Hypertarget{classGerente_a63ce63a22723ff9083dd172302b23367}\label{classGerente_a63ce63a22723ff9083dd172302b23367}} 
+\index{Gerente@{Gerente}!getParticipacaoLucros@{getParticipacaoLucros}}
+\index{getParticipacaoLucros@{getParticipacaoLucros}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{getParticipacaoLucros()}{getParticipacaoLucros()}}
+{\footnotesize\ttfamily float Gerente\+::get\+Participacao\+Lucros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter da participacao nos lucros. 
+
+\begin{DoxyReturn}{Returns}
+percentual de participacao nos lucros 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}\label{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}} 
+\index{Gerente@{Gerente}!setParticipacaoLucros@{setParticipacaoLucros}}
+\index{setParticipacaoLucros@{setParticipacaoLucros}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{setParticipacaoLucros()}{setParticipacaoLucros()}}
+{\footnotesize\ttfamily void Gerente\+::set\+Participacao\+Lucros (\begin{DoxyParamCaption}\item[{float}]{participacao\+Lucros }\end{DoxyParamCaption})}
+
+
+
+Setter da participacao nos lucros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em participacao\+Lucros} & percentual de participacao nos lucros \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

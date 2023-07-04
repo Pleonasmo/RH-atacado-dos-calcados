@@ -28,11 +28,7 @@ public:
      * @param faturamentoMensal Faturamento mensal da empresa
      */
     Empresa(std::string nomeEmpresa, std::string cnpj, float faturamentoMensal);
-    /**
-     * @brief Função para remover "." e "-" da matricula
-     * @param matricula A matricula do funcionario
-     */
-    string simplificadorMatricula(string matricula);
+
     /**
      * @brief Getter do faturamento mensal
      * @return Faturamento mensal da empresa
@@ -78,6 +74,7 @@ public:
      * @brief Getter dos ASGs
      * @return dados de todos os ASGs da empresa
      */
+
     std::vector<Asg> getAsgs();
 
     /**
@@ -95,8 +92,13 @@ public:
     /**
      * @brief Função que carrega funções do arquivo
      */
-    void carregarFuncoes();
 
+    void carregarFuncoes();
+    /**
+     * @brief Função para remover "." e "-" da matricula
+     * @param matricula A matricula do funcionario
+     */
+    std::string simplificadorMatricula(std::string matricula);
     /**
      * @brief Função que carrega empresa a partir do arquivo
      */

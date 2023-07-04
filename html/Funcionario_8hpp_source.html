@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Funcionario/Funcionario.hpp Source File</title>
+<title>RH do Atacado dos Calçados: Funcionario/Funcionario.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">RH do Atacado dos Calçados
    </div>
   </td>
  </tr>
@@ -81,24 +81,40 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> quantFaltas;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// Metodos virtuais:</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> calcularSalario(<span class="keywordtype">int</span> diasFaltas) = 0;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> calcularRecisao(<a class="code" href="structData.html">Data</a> desligamento) = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Getters e Setters:</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string getSalario();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> setSalario(std::string salario);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::string getMatricula();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> setMatricula(std::string matricula);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="structData.html">Data</a> getIngressoEmpresa();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> setIngressoEmpresa(<span class="keywordtype">int</span> dia, <span class="keywordtype">int</span> mes, <span class="keywordtype">int</span> ano);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> getQuantFaltas();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> setQuantFaltas(<span class="keywordtype">int</span> quantFaltas);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classFuncionario.html#ae36c15cd6c61177d50cc6bf5b96c05a6">calcularSalario</a>(<span class="keywordtype">int</span> diasFaltas) = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classFuncionario.html#a1aa96ac8c4f6c5e9af559d9b94d37b46">calcularRecisao</a>(<a class="code" href="structData.html">Data</a> desligamento) = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::string <a class="code" href="classFuncionario.html#a498456a7d18cc96d938ac7d995c9e59e">getSalario</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFuncionario.html#a338524a3b30a1b1c63699d176221aa67">setSalario</a>(std::string salario);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::string <a class="code" href="classFuncionario.html#a1912eb4022aab6c318c8d1cbb42c5192">getMatricula</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFuncionario.html#ac9ddaedaa41e63ddd1a30f68c992bdfb">setMatricula</a>(std::string matricula);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="structData.html">Data</a> <a class="code" href="classFuncionario.html#a60b17ab39198bd46522c61f0f6701359">getIngressoEmpresa</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFuncionario.html#a41a2d62131629ff0cfd29aeeaf70f25d">setIngressoEmpresa</a>(<span class="keywordtype">int</span> dia, <span class="keywordtype">int</span> mes, <span class="keywordtype">int</span> ano);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classFuncionario.html#a352799f5a8968e997b32c4c3a88ec1c9">getQuantFaltas</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFuncionario.html#a58264a6e199488d49b21fe6323891434">setQuantFaltas</a>(<span class="keywordtype">int</span> quantFaltas);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassFuncionario_html"><div class="ttname"><a href="classFuncionario.html">Funcionario</a></div><div class="ttdef"><b>Definition:</b> Funcionario.hpp:6</div></div>
+<div class="ttc" id="aclassFuncionario_html_a498456a7d18cc96d938ac7d995c9e59e"><div class="ttname"><a href="classFuncionario.html#a498456a7d18cc96d938ac7d995c9e59e">Funcionario::getSalario</a></div><div class="ttdeci">std::string getSalario()</div><div class="ttdoc">Getter de salario do funcionario.</div><div class="ttdef"><b>Definition:</b> Funcionario.cpp:3</div></div>
+<div class="ttc" id="aclassFuncionario_html_a338524a3b30a1b1c63699d176221aa67"><div class="ttname"><a href="classFuncionario.html#a338524a3b30a1b1c63699d176221aa67">Funcionario::setSalario</a></div><div class="ttdeci">void setSalario(std::string salario)</div><div class="ttdoc">Setter de salario.</div><div class="ttdef"><b>Definition:</b> Funcionario.cpp:4</div></div>
+<div class="ttc" id="aclassFuncionario_html_a1912eb4022aab6c318c8d1cbb42c5192"><div class="ttname"><a href="classFuncionario.html#a1912eb4022aab6c318c8d1cbb42c5192">Funcionario::getMatricula</a></div><div class="ttdeci">std::string getMatricula()</div><div class="ttdoc">Getter de matricula.</div><div class="ttdef"><b>Definition:</b> Funcionario.cpp:5</div></div>
+<div class="ttc" id="aclassFuncionario_html_a1aa96ac8c4f6c5e9af559d9b94d37b46"><div class="ttname"><a href="classFuncionario.html#a1aa96ac8c4f6c5e9af559d9b94d37b46">Funcionario::calcularRecisao</a></div><div class="ttdeci">virtual float calcularRecisao(Data desligamento)=0</div><div class="ttdoc">função para calcular recisão do funcionario</div></div>
+<div class="ttc" id="aclassFuncionario_html_a60b17ab39198bd46522c61f0f6701359"><div class="ttname"><a href="classFuncionario.html#a60b17ab39198bd46522c61f0f6701359">Funcionario::getIngressoEmpresa</a></div><div class="ttdeci">Data getIngressoEmpresa()</div><div class="ttdoc">Getter de data de ingresso na empresa.</div><div class="ttdef"><b>Definition:</b> Funcionario.cpp:7</div></div>
+<div class="ttc" id="aclassFuncionario_html_ac9ddaedaa41e63ddd1a30f68c992bdfb"><div class="ttname"><a href="classFuncionario.html#ac9ddaedaa41e63ddd1a30f68c992bdfb">Funcionario::setMatricula</a></div><div class="ttdeci">void setMatricula(std::string matricula)</div><div class="ttdoc">Setter de matricula.</div><div class="ttdef"><b>Definition:</b> Funcionario.cpp:6</div></div>
+<div class="ttc" id="aclassFuncionario_html_ae36c15cd6c61177d50cc6bf5b96c05a6"><div class="ttname"><a href="classFuncionario.html#ae36c15cd6c61177d50cc6bf5b96c05a6">Funcionario::calcularSalario</a></div><div class="ttdeci">virtual float calcularSalario(int diasFaltas)=0</div><div class="ttdoc">função para calcular salario do funcionario</div></div>
+<div class="ttc" id="aclassFuncionario_html_a58264a6e199488d49b21fe6323891434"><div class="ttname"><a href="classFuncionario.html#a58264a6e199488d49b21fe6323891434">Funcionario::setQuantFaltas</a></div><div class="ttdeci">void setQuantFaltas(int quantFaltas)</div><div class="ttdoc">Setter de quantidade de faltas.</div><div class="ttdef"><b>Definition:</b> Funcionario.cpp:15</div></div>
+<div class="ttc" id="aclassFuncionario_html_a41a2d62131629ff0cfd29aeeaf70f25d"><div class="ttname"><a href="classFuncionario.html#a41a2d62131629ff0cfd29aeeaf70f25d">Funcionario::setIngressoEmpresa</a></div><div class="ttdeci">void setIngressoEmpresa(int dia, int mes, int ano)</div><div class="ttdoc">Setter de data de ingresso na empresa.</div><div class="ttdef"><b>Definition:</b> Funcionario.cpp:8</div></div>
+<div class="ttc" id="aclassFuncionario_html_a352799f5a8968e997b32c4c3a88ec1c9"><div class="ttname"><a href="classFuncionario.html#a352799f5a8968e997b32c4c3a88ec1c9">Funcionario::getQuantFaltas</a></div><div class="ttdeci">int getQuantFaltas()</div><div class="ttdoc">Getter de quantidade de faltas.</div><div class="ttdef"><b>Definition:</b> Funcionario.cpp:14</div></div>
 <div class="ttc" id="astructData_html"><div class="ttname"><a href="structData.html">Data</a></div><div class="ttdef"><b>Definition:</b> Util.hpp:5</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

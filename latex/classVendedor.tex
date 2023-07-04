@@ -11,21 +11,148 @@ Collaboration diagram for Vendedor\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classVendedor_abc9586a0933dc3719e8b7fcfe9db0563}\label{classVendedor_abc9586a0933dc3719e8b7fcfe9db0563}} 
+\mbox{\hyperlink{classVendedor_abc9586a0933dc3719e8b7fcfe9db0563}{Vendedor}} ()
+\begin{DoxyCompactList}\small\item\em construtor vazio de vendedor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVendedor_a512df4b4210e3eaf2797efbfa3f5741c}{Vendedor}} (std\+::string nome, std\+::string cpf, std\+::string estado\+Civil, int diaN, int mesN, int anoN, std\+::string cidade, std\+::string bairro, std\+::string rua, std\+::string cep, int numero, int quant\+Filhos, std\+::string salario, std\+::string matricula, int dia, int mes, int ano, char tipo\+Vendedor, int quant\+Faltas)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado de \mbox{\hyperlink{classVendedor}{Vendedor}}. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classVendedor_a83376ab66f9c1a8971ff8107a427a013}{get\+Tipo\+Vendedor}} ()
+\begin{DoxyCompactList}\small\item\em Getter do tipo do vendedor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVendedor_a7dbf14984f22245f787b3461d55006a8}{set\+Tipo\+Vendedor}} (char tipo\+Vendedor)
+\begin{DoxyCompactList}\small\item\em Setter do tipo do vendedor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classVendedor_a746aa6a5957296defe5cd3aff85bbcc1}{calcular\+Salario}} (int dias\+Faltas) override
+\begin{DoxyCompactList}\small\item\em calculo do salario de vendedor \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classVendedor_aeefa062fed5d9ff0bed132c2f540f991}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento) override
+\begin{DoxyCompactList}\small\item\em calculo da recisao do vendedor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classVendedor_a512df4b4210e3eaf2797efbfa3f5741c}\label{classVendedor_a512df4b4210e3eaf2797efbfa3f5741c}} 
-{\bfseries Vendedor} (std\+::string nome, std\+::string cpf, std\+::string estado\+Civil, int diaN, int mesN, int anoN, std\+::string cidade, std\+::string bairro, std\+::string rua, std\+::string cep, int numero, int quant\+Filhos, std\+::string salario, std\+::string matricula, int dia, int mes, int ano, char tipo\+Vendedor, int quant\+Faltas)
-\item 
-\mbox{\Hypertarget{classVendedor_a83376ab66f9c1a8971ff8107a427a013}\label{classVendedor_a83376ab66f9c1a8971ff8107a427a013}} 
-char {\bfseries get\+Tipo\+Vendedor} ()
-\item 
-\mbox{\Hypertarget{classVendedor_a7dbf14984f22245f787b3461d55006a8}\label{classVendedor_a7dbf14984f22245f787b3461d55006a8}} 
-void {\bfseries set\+Tipo\+Vendedor} (char tipo\+Vendedor)
-\item 
-\mbox{\Hypertarget{classVendedor_a746aa6a5957296defe5cd3aff85bbcc1}\label{classVendedor_a746aa6a5957296defe5cd3aff85bbcc1}} 
-float {\bfseries calcular\+Salario} (int dias\+Faltas) override
-\item 
+\index{Vendedor@{Vendedor}!Vendedor@{Vendedor}}
+\index{Vendedor@{Vendedor}!Vendedor@{Vendedor}}
+\doxysubsubsection{\texorpdfstring{Vendedor()}{Vendedor()}}
+{\footnotesize\ttfamily Vendedor\+::\+Vendedor (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{std\+::string}]{estado\+Civil,  }\item[{int}]{diaN,  }\item[{int}]{mesN,  }\item[{int}]{anoN,  }\item[{std\+::string}]{cidade,  }\item[{std\+::string}]{bairro,  }\item[{std\+::string}]{rua,  }\item[{std\+::string}]{cep,  }\item[{int}]{numero,  }\item[{int}]{quant\+Filhos,  }\item[{std\+::string}]{salario,  }\item[{std\+::string}]{matricula,  }\item[{int}]{dia,  }\item[{int}]{mes,  }\item[{int}]{ano,  }\item[{char}]{tipo\+Vendedor,  }\item[{int}]{quant\+Faltas }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado de \mbox{\hyperlink{classVendedor}{Vendedor}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & O nome do vendedor \\
+\hline
+{\em cpf} & O cpf do vendedor \\
+\hline
+{\em dia} & O dia de nascimento \\
+\hline
+{\em mes} & O mês de nascimento \\
+\hline
+{\em ano} & O ano de nascimento \\
+\hline
+{\em estado\+Civil} & O estado civil do vendedor \\
+\hline
+{\em cidade} & A cidade do vendedor \\
+\hline
+{\em bairro} & O bairro do vendedor \\
+\hline
+{\em rua} & A rua do vendedor \\
+\hline
+{\em cep} & O cep do vendedor \\
+\hline
+{\em numero} & O numero da casa do vendedor \\
+\hline
+{\em quant\+Filhos} & A quantidade de filhos do vendedor \\
+\hline
+{\em tipo\+Vendedor} & tipo do vendedor \\
+\hline
+{\em salario} & O salario do vendedor \\
+\hline
+{\em matricula} & a matricula do vendedor \\
+\hline
+{\em dia} & dia de ingresso do vendedor \\
+\hline
+{\em mes} & mes de ingresso do vendedor \\
+\hline
+{\em ano} & ano de ingresso do vendedor \\
+\hline
+{\em quant\+Faltas} & quantidade de faltas do vendedor \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classVendedor_aeefa062fed5d9ff0bed132c2f540f991}\label{classVendedor_aeefa062fed5d9ff0bed132c2f540f991}} 
-float {\bfseries calcular\+Recisao} (\mbox{\hyperlink{structData}{Data}} desligamento) override
-\end{DoxyCompactItemize}
+\index{Vendedor@{Vendedor}!calcularRecisao@{calcularRecisao}}
+\index{calcularRecisao@{calcularRecisao}!Vendedor@{Vendedor}}
+\doxysubsubsection{\texorpdfstring{calcularRecisao()}{calcularRecisao()}}
+{\footnotesize\ttfamily float Vendedor\+::calcular\+Recisao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+calculo da recisao do vendedor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desligamento} & data de desligamento do vendedor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor da recisao do vendedor 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFuncionario_a1aa96ac8c4f6c5e9af559d9b94d37b46}{Funcionario}}.
+
+\mbox{\Hypertarget{classVendedor_a746aa6a5957296defe5cd3aff85bbcc1}\label{classVendedor_a746aa6a5957296defe5cd3aff85bbcc1}} 
+\index{Vendedor@{Vendedor}!calcularSalario@{calcularSalario}}
+\index{calcularSalario@{calcularSalario}!Vendedor@{Vendedor}}
+\doxysubsubsection{\texorpdfstring{calcularSalario()}{calcularSalario()}}
+{\footnotesize\ttfamily float Vendedor\+::calcular\+Salario (\begin{DoxyParamCaption}\item[{int}]{dias\+Faltas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+calculo do salario de vendedor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dias\+Faltas} & quantidade de faltas do vendedor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor do salario do vendedor 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}{Funcionario}}.
+
+\mbox{\Hypertarget{classVendedor_a83376ab66f9c1a8971ff8107a427a013}\label{classVendedor_a83376ab66f9c1a8971ff8107a427a013}} 
+\index{Vendedor@{Vendedor}!getTipoVendedor@{getTipoVendedor}}
+\index{getTipoVendedor@{getTipoVendedor}!Vendedor@{Vendedor}}
+\doxysubsubsection{\texorpdfstring{getTipoVendedor()}{getTipoVendedor()}}
+{\footnotesize\ttfamily char Vendedor\+::get\+Tipo\+Vendedor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter do tipo do vendedor. 
+
+\begin{DoxyReturn}{Returns}
+tipo do vendedor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVendedor_a7dbf14984f22245f787b3461d55006a8}\label{classVendedor_a7dbf14984f22245f787b3461d55006a8}} 
+\index{Vendedor@{Vendedor}!setTipoVendedor@{setTipoVendedor}}
+\index{setTipoVendedor@{setTipoVendedor}!Vendedor@{Vendedor}}
+\doxysubsubsection{\texorpdfstring{setTipoVendedor()}{setTipoVendedor()}}
+{\footnotesize\ttfamily void Vendedor\+::set\+Tipo\+Vendedor (\begin{DoxyParamCaption}\item[{char}]{tipo\+Vendedor }\end{DoxyParamCaption})}
+
+
+
+Setter do tipo do vendedor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tipo\+Vendedor} & tipo do vendedor \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
